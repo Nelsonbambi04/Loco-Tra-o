@@ -74,13 +74,13 @@ function ContactForm() {
     }`;
 
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-white p-6 shadow-xl shadow-petroleum-900/5 ring-1 ring-petroleum-900/5 sm:p-9">
+    <div className="relative overflow-hidden rounded-3xl bg-white p-5 shadow-xl shadow-petroleum-900/5 ring-1 ring-petroleum-900/5 sm:p-9">
       {sent ? (
         <div className="flex flex-col items-center justify-center gap-4 py-16 text-center">
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-sand-100 text-sand-600">
             <CheckCircle2 className="h-9 w-9" strokeWidth={1.6} />
           </div>
-          <h3 className="font-serif text-2xl font-semibold text-petroleum-900">
+          <h3 className="font-serif text-xl font-semibold text-petroleum-900 sm:text-2xl">
             Mensagem enviada!
           </h3>
           <p className="max-w-md text-sm text-charcoal/65">
@@ -100,7 +100,7 @@ function ContactForm() {
         <form onSubmit={onSubmit} noValidate className="flex flex-col gap-5">
           <div>
             <Eyebrow>Formulário de Orçamento</Eyebrow>
-            <h3 className="mt-3 font-serif text-2xl font-semibold text-petroleum-900 sm:text-3xl">
+            <h3 className="mt-3 font-serif text-xl font-semibold text-petroleum-900 sm:text-3xl">
               Fale Connosco
             </h3>
             <p className="mt-2 text-sm text-charcoal/60">
@@ -236,8 +236,8 @@ function ContactInfo() {
     <div className="flex flex-col gap-4">
       {items.map((item) => (
         <Reveal key={item.label}>
-          <div className="flex items-start gap-4 rounded-2xl border border-petroleum-900/10 bg-white/5 p-5 backdrop-blur">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sand-300 text-petroleum-900">
+          <div className="flex items-start gap-3 rounded-2xl border border-petroleum-900/10 bg-white p-4 shadow-sm shadow-petroleum-900/5 sm:gap-4 sm:p-5">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sand-300 text-petroleum-900 sm:h-11 sm:w-11">
               <item.icon className="h-5 w-5" strokeWidth={1.8} />
             </div>
             <div>
@@ -250,14 +250,14 @@ function ContactInfo() {
                     <a
                       key={i}
                       href={item.hrefs[i]}
-                      className="text-sm font-medium text-white transition-colors hover:text-sand-300"
+                      className="text-sm font-semibold text-petroleum-900 transition-colors hover:text-sand-600"
                     >
                       {line}
                     </a>
                   ) : (
                     <span
                       key={i}
-                      className="text-sm font-medium text-white/90"
+                      className="text-sm font-semibold text-petroleum-900"
                     >
                       {line}
                     </span>

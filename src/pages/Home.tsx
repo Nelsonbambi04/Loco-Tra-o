@@ -22,26 +22,44 @@ import { CTABand } from "@/components/sections";
 import { Icon } from "@/components/Icon";
 
 function Hero() {
+  const heroImages = [
+    IMAGES.villaDusk,
+    IMAGES.villaPool,
+    IMAGES.facadeGlass,
+    IMAGES.apartments,
+    IMAGES.villaIlluminated,
+  ];
   const { navigate } = useNav();
 
   return (
     <section className="mobile-hero relative flex min-h-[640px] items-center justify-center overflow-hidden bg-petroleum-950 pt-28 text-center text-white sm:min-h-[720px] sm:pt-36">
+      <div className="absolute inset-0">
+        {heroImages.map((image, index) => (
+          <img
+            key={image}
+            src={image}
+            alt="Projeto arquitetÃ³nico moderno da Loco TraÃ§os"
+            className="hero-slide absolute inset-0 h-full w-full object-cover object-center"
+            style={{ animationDelay: `${index * 5}s` }}
+          />
+        ))}
+      </div>
       <img
         src={IMAGES.hero}
         alt="Projeto arquitetónico moderno da Loco Traços"
-        className="absolute inset-0 h-full w-full animate-slow-zoom object-cover object-center"
+        className="hidden"
       />
       <div className="absolute inset-0 bg-petroleum-950/64 sm:bg-petroleum-950/58" />
       <div className="absolute inset-0 bg-gradient-to-t from-petroleum-950/85 via-petroleum-950/25 to-petroleum-950/20" />
 
       <button
-        className="absolute left-6 top-1/2 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-petroleum-950/40 text-white backdrop-blur transition-colors hover:bg-sand-500 lg:flex"
+        className="hidden"
         aria-label="Projeto anterior"
       >
         <ArrowLeft className="h-5 w-5" />
       </button>
       <button
-        className="absolute right-6 top-1/2 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-petroleum-950/40 text-white backdrop-blur transition-colors hover:bg-sand-500 lg:flex"
+        className="hidden"
         aria-label="Próximo projeto"
       >
         <ArrowRightIcon className="h-5 w-5" />
@@ -111,7 +129,7 @@ function Welcome() {
                     <Icon name={service.icon} className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2} />
                   </div>
                 </div>
-                <div className="p-6 pt-9 sm:p-7 sm:pt-10">
+                  <div className="p-5 pt-8 sm:p-7 sm:pt-10">
                   <p className="text-xs font-black uppercase tracking-[0.16em] text-sand-600">
                     {service.index}
                   </p>
@@ -147,7 +165,7 @@ function WhyUs() {
               {STATS.map((stat) => (
                 <Reveal key={stat.label}>
                   <div className="border border-white/10 p-4 sm:p-5">
-                    <p className="font-display text-2xl font-black text-sand-400 sm:text-3xl">
+                    <p className="font-display text-xl font-black text-sand-400 sm:text-3xl">
                       <CountUp to={stat.value} suffix={stat.suffix} />
                     </p>
                     <p className="mt-2 text-[0.68rem] font-bold uppercase tracking-[0.12em] text-white/55 sm:text-xs sm:tracking-[0.16em]">
@@ -241,7 +259,7 @@ function Statement() {
         <Reveal>
           <figure className="mx-auto max-w-4xl text-center">
             <Quote className="mx-auto h-9 w-9 text-sand-500 sm:h-10 sm:w-10" />
-            <blockquote className="mt-5 font-display text-xl font-black uppercase leading-relaxed tracking-[0.02em] text-petroleum-900 sm:text-3xl sm:tracking-[0.03em]">
+            <blockquote className="mt-5 font-display text-base font-black uppercase leading-relaxed tracking-[0.02em] text-petroleum-900 sm:text-3xl sm:tracking-[0.03em]">
               Do estudo topográfico inicial à entrega da última chave,
               coordenamos cada fase com transparência, segurança e acabamento
               profissional.

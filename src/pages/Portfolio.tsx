@@ -27,7 +27,7 @@ function FeaturedProjects() {
           intro="Uma amostra das obras residenciais, comerciais e institucionais que contaram com a assinatura de excelência Loco Traços."
         />
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
+        <div className="mt-10 grid gap-5 sm:mt-14 sm:gap-6 lg:grid-cols-2">
           {FEATURED_PROJECTS.map((p, i) => (
             <Reveal key={p.name} delay={(i % 2) * 120}>
               <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-sand-50 shadow-sm ring-1 ring-petroleum-900/5 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-petroleum-900/10">
@@ -45,11 +45,11 @@ function FeaturedProjects() {
                     <ArrowUpRight className="h-4 w-4" />
                   </span>
                 </div>
-                <div className="flex flex-1 flex-col p-6">
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
                   <p className="font-display text-[0.7rem] font-bold uppercase tracking-[0.16em] text-sand-600">
                     {p.type}
                   </p>
-                  <h3 className="mt-2 font-serif text-2xl font-semibold leading-tight text-petroleum-900">
+                  <h3 className="mt-2 font-serif text-xl font-semibold leading-tight text-petroleum-900 sm:text-2xl">
                     {p.name}
                   </h3>
                   <p className="mt-2 flex items-center gap-1.5 text-sm text-charcoal/60">
@@ -93,7 +93,7 @@ function Gallery() {
           intro="Residências, edifícios, clínicas, igrejas e espaços comerciais entregues em várias províncias de Angola."
         />
 
-        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-9 grid grid-cols-2 gap-3 sm:mt-12 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
           {GALLERY_PROJECTS.map((p, i) => (
             <Reveal
               key={p.name}
@@ -107,8 +107,8 @@ function Gallery() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-petroleum-950/85 via-petroleum-950/10 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-95" />
-                <figcaption className="absolute inset-x-0 bottom-0 p-4 text-left">
-                  <h4 className="font-display text-sm font-bold leading-tight text-white">
+                <figcaption className="absolute inset-x-0 bottom-0 p-3 text-left sm:p-4">
+                  <h4 className="font-display text-xs font-bold leading-tight text-white sm:text-sm">
                     {p.name}
                   </h4>
                   <p className="mt-0.5 text-[0.7rem] leading-snug text-petroleum-100/75">
@@ -133,14 +133,14 @@ function PortfolioStats() {
   return (
     <Section className="bg-white py-16">
       <Container>
-        <div className="grid grid-cols-1 gap-8 rounded-2xl border border-petroleum-900/10 bg-sand-50 p-10 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 rounded-2xl border border-petroleum-900/10 bg-sand-50 p-6 sm:grid-cols-3 sm:p-10">
           {stats.map((s, i) => (
             <Reveal
               key={s.label}
               delay={i * 100}
               className="flex items-center justify-center gap-5 text-center sm:border-l sm:border-petroleum-900/10 sm:justify-start sm:text-left"
             >
-              <p className="font-serif text-4xl font-semibold text-sand-500 sm:text-5xl">
+              <p className="font-serif text-3xl font-semibold text-sand-500 sm:text-5xl">
                 <CountUp to={s.value} suffix={s.suffix} />
               </p>
               <p className="max-w-[8rem] text-left text-xs uppercase tracking-[0.18em] text-charcoal/55">

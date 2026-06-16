@@ -37,7 +37,7 @@ export function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className={cn("py-16 sm:py-24 lg:py-28", className)}>
+    <section id={id} className={cn("py-12 sm:py-24 lg:py-28", className)}>
       {children}
     </section>
   );
@@ -135,7 +135,7 @@ export function SectionHeading({
       <Reveal delay={80}>
         <h2
           className={cn(
-            "font-display text-[2rem] font-black leading-[1.12] tracking-tight sm:text-4xl lg:text-[2.8rem]",
+            "font-display text-[1.55rem] font-black leading-[1.14] tracking-tight sm:text-4xl lg:text-[2.8rem]",
             tone === "light" ? "text-white" : "text-petroleum-900",
           )}
         >
@@ -146,7 +146,7 @@ export function SectionHeading({
         <Reveal delay={160}>
           <p
             className={cn(
-              "max-w-2xl text-[0.98rem] leading-relaxed sm:text-lg",
+              "max-w-2xl text-[0.9rem] leading-relaxed sm:text-lg",
               tone === "light" ? "text-petroleum-100/80" : "text-charcoal/70",
               align === "center" && "mx-auto",
             )}
@@ -180,7 +180,7 @@ const VARIANTS: Record<Variant, string> = {
 const SIZES: Record<Size, string> = {
   sm: "px-4 py-2 text-xs",
   md: "px-6 py-3 text-sm",
-  lg: "px-8 py-4 text-[0.95rem]",
+  lg: "px-6 py-3.5 text-[0.82rem] sm:px-8 sm:py-4 sm:text-[0.95rem]",
 };
 
 type ButtonProps = {

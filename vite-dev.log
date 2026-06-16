@@ -15,3 +15,16 @@ Port 5173 is in use, trying another one...
 [2m16:28:54[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Portfolio.tsx, /src/index.css[22m
 [2m16:28:54[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Contact.tsx, /src/index.css[22m
 [2m16:30:32[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m17:44:24[22m [36m[1m[vite][22m[39m [32m.env.local changed, restarting server...[39m
+[2m17:44:24[22m [36m[1m[vite][22m[39m [32m.env.local changed, restarting server...[39m
+[2m17:44:24[22m [36m[1m[vite][22m[39m server restarted.
+[2m18:29:47[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m18:35:02[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Contact.tsx, /src/index.css[22m
+[2m18:38:14[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m18:38:22[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/ui.tsx[22m
+[2m18:38:34[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections.tsx[22m
+[2m18:38:58[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Services.tsx, /src/index.css[22m
+[2m18:39:09[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Portfolio.tsx, /src/index.css[22m
+[2m18:39:21[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/About.tsx, /src/index.css[22m
+[2m18:39:31[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Contact.tsx, /src/index.css[22m
+[2m18:39:37[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m

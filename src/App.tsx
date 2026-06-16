@@ -1,7 +1,6 @@
 import { NavProvider, useNav } from "@/lib/navigation";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ScrollTop } from "@/components/ScrollTop";
 import { Home } from "@/pages/Home";
 import { About } from "@/pages/About";
 import { Services } from "@/pages/Services";
@@ -28,13 +27,12 @@ function CurrentPage() {
 export default function App() {
   return (
     <NavProvider>
-      <div className="site-shell flex min-h-screen flex-col bg-white">
+      <div className="flex min-h-screen flex-col bg-white">
         <Navbar />
         <main className="flex-1">
           <CurrentPage />
         </main>
         <Footer />
-        <ScrollTop />
       </div>
     </NavProvider>
   );
