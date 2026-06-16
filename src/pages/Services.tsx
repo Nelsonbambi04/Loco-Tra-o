@@ -17,7 +17,7 @@ function ServiceRow() {
   return (
     <Section className="bg-white">
       <Container>
-        <div className="flex flex-col gap-16">
+        <div className="flex flex-col gap-12 sm:gap-16">
           {SERVICES.map((s, i) => {
             const reverse = i % 2 === 1;
             return (
@@ -41,7 +41,7 @@ function ServiceRow() {
                       <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-xl bg-white/90 text-petroleum-900 shadow-lg backdrop-blur">
                         <Icon name={s.icon} className="h-6 w-6" />
                       </div>
-                      <span className="absolute right-5 top-5 font-serif text-5xl font-semibold text-white/80">
+                      <span className="absolute right-5 top-5 font-serif text-4xl font-semibold text-white/80 sm:text-5xl">
                         {s.index}
                       </span>
                     </div>
@@ -52,10 +52,10 @@ function ServiceRow() {
                     <span className="font-display text-xs font-bold uppercase tracking-[0.25em] text-sand-600">
                       Serviço {s.index}
                     </span>
-                    <h3 className="mt-3 font-serif text-2xl font-semibold leading-tight text-petroleum-900 sm:text-3xl">
+                    <h3 className="mt-3 font-serif text-xl font-semibold leading-tight text-petroleum-900 sm:text-3xl">
                       {s.title}
                     </h3>
-                    <p className="mt-4 text-base leading-relaxed text-charcoal/70">
+                    <p className="mt-3 text-sm leading-relaxed text-charcoal/70 sm:mt-4 sm:text-base">
                       {s.description}
                     </p>
                     <ul className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -126,11 +126,11 @@ function Process() {
           intro="Um método estruturado que garante transparência, qualidade e cumprimento de prazos em cada etapa."
           className="mx-auto items-center"
         />
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
             <Reveal key={s.n} delay={i * 110}>
-              <div className="group relative h-full rounded-2xl border border-white/10 bg-white/[0.03] p-7 transition-colors hover:border-sand-300/40">
-                <span className="font-serif text-4xl font-semibold text-sand-300">
+              <div className="group relative h-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-sand-300/40 sm:p-7">
+                <span className="font-serif text-3xl font-semibold text-sand-300 sm:text-4xl">
                   {s.n}
                 </span>
                 <h3 className="mt-4 font-display text-base font-bold tracking-tight text-white">

@@ -14,7 +14,7 @@ function History() {
   return (
     <Section>
       <Container>
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-center gap-9 sm:gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <SectionHeading
               eyebrow="Sobre a Loco Traços"
@@ -26,7 +26,7 @@ function History() {
               }
             />
             <Reveal delay={120}>
-              <p className="mt-6 text-base leading-relaxed text-charcoal/75">
+              <p className="mt-5 text-sm leading-relaxed text-charcoal/75 sm:mt-6 sm:text-base">
                 Surgimos oficialmente no ano de {COMPANY.founded}, oferecendo
                 serviços integrados de engenharia, arquitetura e consultoria com
                 foco no mercado de Angola. Somos motivados pelo espírito de
@@ -35,7 +35,7 @@ function History() {
               </p>
             </Reveal>
             <Reveal delay={200}>
-              <p className="mt-4 text-base leading-relaxed text-charcoal/75">
+              <p className="mt-4 text-sm leading-relaxed text-charcoal/75 sm:text-base">
                 Contamos com instalações modernas e toda a logística adequada
                 para gerir a sua empreitada — desde o estudo topográfico inicial
                 até à entrega da última chave, com o acabamento perfeito.
@@ -95,10 +95,10 @@ function Pillars() {
           className="mx-auto items-center"
         />
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:mt-14 sm:gap-6 lg:grid-cols-3">
           {PILLARS.map((p, i) => (
             <Reveal key={p.key} delay={i * 120}>
-              <div className="group relative flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-8 transition-colors hover:border-sand-300/40">
+              <div className="group relative flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-sand-300/40 sm:p-8">
                 <div className="flex items-center justify-between">
                   <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sand-300 text-petroleum-900 transition-transform group-hover:scale-105">
                     <Icon name={p.icon} className="h-7 w-7" />
@@ -107,7 +107,7 @@ function Pillars() {
                     0{i + 1}
                   </span>
                 </div>
-                <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-white">
+                <h3 className="mt-5 font-display text-lg font-bold tracking-tight text-white sm:mt-6 sm:text-xl">
                   {p.label}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-petroleum-100/70">
@@ -171,7 +171,7 @@ function TeamTech() {
               />
             </div>
             <div className="absolute -bottom-5 -left-5 z-20 rounded-2xl bg-petroleum-900 p-6 text-white shadow-xl">
-              <p className="font-serif text-3xl font-semibold text-sand-300">+</p>
+              <p className="font-serif text-2xl font-semibold text-sand-300 sm:text-3xl">+</p>
               <p className="mt-1 max-w-[12rem] text-xs leading-snug text-petroleum-100/80">
                 Engenharia e Arquitetura de Vanguarda
               </p>

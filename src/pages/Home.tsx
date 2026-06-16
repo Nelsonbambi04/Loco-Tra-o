@@ -129,7 +129,7 @@ function Welcome() {
                     <Icon name={service.icon} className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2} />
                   </div>
                 </div>
-                <div className="p-6 pt-9 sm:p-7 sm:pt-10">
+                  <div className="p-5 pt-8 sm:p-7 sm:pt-10">
                   <p className="text-xs font-black uppercase tracking-[0.16em] text-sand-600">
                     {service.index}
                   </p>
@@ -165,7 +165,7 @@ function WhyUs() {
               {STATS.map((stat) => (
                 <Reveal key={stat.label}>
                   <div className="border border-white/10 p-4 sm:p-5">
-                    <p className="font-display text-2xl font-black text-sand-400 sm:text-3xl">
+                    <p className="font-display text-xl font-black text-sand-400 sm:text-3xl">
                       <CountUp to={stat.value} suffix={stat.suffix} />
                     </p>
                     <p className="mt-2 text-[0.68rem] font-bold uppercase tracking-[0.12em] text-white/55 sm:text-xs sm:tracking-[0.16em]">
@@ -259,7 +259,7 @@ function Statement() {
         <Reveal>
           <figure className="mx-auto max-w-4xl text-center">
             <Quote className="mx-auto h-9 w-9 text-sand-500 sm:h-10 sm:w-10" />
-            <blockquote className="mt-5 font-display text-xl font-black uppercase leading-relaxed tracking-[0.02em] text-petroleum-900 sm:text-3xl sm:tracking-[0.03em]">
+            <blockquote className="mt-5 font-display text-base font-black uppercase leading-relaxed tracking-[0.02em] text-petroleum-900 sm:text-3xl sm:tracking-[0.03em]">
               Do estudo topográfico inicial à entrega da última chave,
               coordenamos cada fase com transparência, segurança e acabamento
               profissional.
