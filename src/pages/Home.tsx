@@ -22,26 +22,44 @@ import { CTABand } from "@/components/sections";
 import { Icon } from "@/components/Icon";
 
 function Hero() {
+  const heroImages = [
+    IMAGES.villaDusk,
+    IMAGES.villaPool,
+    IMAGES.facadeGlass,
+    IMAGES.apartments,
+    IMAGES.villaIlluminated,
+  ];
   const { navigate } = useNav();
 
   return (
     <section className="mobile-hero relative flex min-h-[640px] items-center justify-center overflow-hidden bg-petroleum-950 pt-28 text-center text-white sm:min-h-[720px] sm:pt-36">
+      <div className="absolute inset-0">
+        {heroImages.map((image, index) => (
+          <img
+            key={image}
+            src={image}
+            alt="Projeto arquitetÃ³nico moderno da Loco TraÃ§os"
+            className="hero-slide absolute inset-0 h-full w-full object-cover object-center"
+            style={{ animationDelay: `${index * 5}s` }}
+          />
+        ))}
+      </div>
       <img
         src={IMAGES.hero}
         alt="Projeto arquitetónico moderno da Loco Traços"
-        className="absolute inset-0 h-full w-full animate-slow-zoom object-cover object-center"
+        className="hidden"
       />
       <div className="absolute inset-0 bg-petroleum-950/64 sm:bg-petroleum-950/58" />
       <div className="absolute inset-0 bg-gradient-to-t from-petroleum-950/85 via-petroleum-950/25 to-petroleum-950/20" />
 
       <button
-        className="absolute left-6 top-1/2 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-petroleum-950/40 text-white backdrop-blur transition-colors hover:bg-sand-500 lg:flex"
+        className="hidden"
         aria-label="Projeto anterior"
       >
         <ArrowLeft className="h-5 w-5" />
       </button>
       <button
-        className="absolute right-6 top-1/2 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-petroleum-950/40 text-white backdrop-blur transition-colors hover:bg-sand-500 lg:flex"
+        className="hidden"
         aria-label="Próximo projeto"
       >
         <ArrowRightIcon className="h-5 w-5" />
