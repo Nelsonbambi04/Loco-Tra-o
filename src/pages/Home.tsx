@@ -96,8 +96,8 @@ function Welcome() {
           intro="Transformamos necessidades em espaços funcionais, seguros e visualmente marcantes. Cada projeto começa com estudo técnico, planeamento transparente e atenção aos detalhes que fazem a obra durar."
         />
 
-        <div className="mt-10 grid gap-5 sm:mt-14 md:grid-cols-3">
-          {SERVICES.slice(0, 3).map((service, i) => (
+        <div className="mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
+          {SERVICES.map((service, i) => (
             <Reveal key={service.slug} delay={i * 100}>
               <article className="group h-full border border-petroleum-900/10 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-petroleum-900/10">
                 <div className="relative h-52 overflow-hidden sm:h-56">

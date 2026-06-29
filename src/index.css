@@ -211,18 +211,6 @@
   animation: rise 0.9s var(--ease-out-expo) both;
 }
 
-.site-shell {
-  border-left: 3px solid var(--color-sand-500);
-  border-right: 3px solid var(--color-sand-500);
-}
-
-@media (max-width: 640px) {
-  .site-shell {
-    border-left-width: 2px;
-    border-right-width: 2px;
-  }
-}
-
 @media (max-width: 640px) {
   .mobile-hero {
     min-height: 560px;

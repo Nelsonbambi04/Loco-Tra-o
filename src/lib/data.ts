@@ -12,11 +12,9 @@ export const COMPANY = {
   nif: "5000510661",
   phones: ["+244 925 783 201", "+244 925 732 355"],
   email: "geral@locotraco.ao",
-  address:
-    "Rua Luther King, Bairro do Maculusso, Distrito Urbano da Maianga, Luanda, Angola",
-  reference:
-    "Via que liga a Avenida de Portugal à Avenida Comandante Che Guevara - próximo à Angola Business School e ao Restaurante Mercado do Peixe.",
-  mapsQuery: "Rua Luther King, Maculusso, Luanda, Angola",
+  address: "56JQ+9P Luanda, Angola",
+  reference: "Localização atual: 56JQ+9P Luanda.",
+  mapsQuery: "56JQ+9P Luanda, Angola",
 };
 
 export const NAV_ITEMS: { id: PageId; label: string }[] = [
@@ -174,8 +172,24 @@ export const SERVICES: Service[] = [
     icon: "map",
   },
   {
-    slug: "consultoria",
+    slug: "plotters-grandes-formatos",
     index: "05",
+    title: "Serviços de Plotters e Grandes Formatos",
+    short: "Impressões de A4 a A0+, cortes e dobragem de folhas.",
+    description:
+      "Serviços de plotagem e impressão técnica em alta resolução, desde formatos A4 até A0+ e medidas personalizadas, incluindo corte preciso e dobragem técnica de folhas para plantas, projetos, mapas e cartazes.",
+    bullets: [
+      "Impressões de A4 a A0+",
+      "Medidas personalizadas",
+      "Corte preciso",
+      "Dobragem técnica de folhas",
+    ],
+    image: IMAGES.teamPlans,
+    icon: "printer",
+  },
+  {
+    slug: "consultoria",
+    index: "06",
     title: "Consultoria e Serviços Técnicos",
     short: "Avaliação, consultoria e formação especializada.",
     description:
@@ -336,5 +350,6 @@ export const SERVICE_OPTIONS = [
   "Projeto de Arquitetura / Design",
   "Fiscalização / Direção de Obra",
   "Topografia",
+  "Plotters / Grandes Formatos",
   "Consultoria / Outro",
 ];
