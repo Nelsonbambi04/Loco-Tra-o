@@ -1,4 +1,4 @@
-import { Check, ArrowUpRight } from "lucide-react";
+import { Check, ArrowUpRight, Layers, Printer, Scissors } from "lucide-react";
 import { useNav } from "@/lib/navigation";
 import { SERVICES, IMAGES } from "@/lib/data";
 import {
@@ -11,6 +11,33 @@ import {
 } from "@/components/ui";
 import { PageHero, CTABand } from "@/components/sections";
 import { Icon } from "@/components/Icon";
+
+type PlotagemFeature = {
+  title: string;
+  description: string;
+  Icon: typeof Printer;
+};
+
+const PLOTAGEM_FEATURES: PlotagemFeature[] = [
+  {
+    title: "ImpressÃ£o de Alta ResoluÃ§Ã£o (Plotter)",
+    description:
+      "Desde o formato A4 atÃ© o formato A0+ e medidas personalizadas. Ideal para plantas de arquitetura, engenharia, mapas e cartazes.",
+    Icon: Printer,
+  },
+  {
+    title: "Corte Preciso",
+    description:
+      "Equipamentos automatizados para garantir acabamento impecÃ¡vel nas dimensÃµes exatas.",
+    Icon: Scissors,
+  },
+  {
+    title: "Dobragem TÃ©cnica de Folhas",
+    description:
+      "Dobragem padronizada de plantas e projetos para facilitar o manuseio, transporte e arquivamento.",
+    Icon: Layers,
+  },
+];
 
 function ServiceRow() {
   const { navigate } = useNav();
@@ -87,6 +114,55 @@ function ServiceRow() {
             );
           })}
         </div>
+      </Container>
+    </Section>
+  );
+}
+
+function PlotagemGrandesFormatos() {
+  const { navigate } = useNav();
+
+  return (
+    <Section className="bg-sand-50">
+      <Container>
+        <SectionHeading
+          align="center"
+          eyebrow="Plotagem"
+          title="ServiÃ§os de Plotagem e Grandes Formatos"
+          intro="PrecisÃ£o, qualidade e acabamento perfeito para os seus projetos, do formato A4 ao A0+."
+          className="mx-auto items-center"
+        />
+
+        <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          {PLOTAGEM_FEATURES.map(({ title, description, Icon }, i) => (
+            <Reveal key={title} delay={i * 110}>
+              <article className="h-full rounded-2xl border border-petroleum-900/10 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sand-300/60 hover:shadow-xl">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-petroleum-900 text-sand-300">
+                  <Icon className="h-6 w-6" strokeWidth={1.9} />
+                </div>
+                <h3 className="mt-5 font-display text-base font-bold tracking-tight text-petroleum-900">
+                  {title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal/70">
+                  {description}
+                </p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal delay={220}>
+          <div className="mt-12 flex justify-center">
+            <Button
+              variant="primary"
+              size="lg"
+              onClick={() => navigate("contact")}
+            >
+              Solicitar OrÃ§amento de Plotagem
+              <ArrowRight />
+            </Button>
+          </div>
+        </Reveal>
       </Container>
     </Section>
   );
@@ -203,6 +279,7 @@ export function Services() {
       />
       <Intro />
       <ServiceRow />
+      <PlotagemGrandesFormatos />
       <Process />
       <CTABand image={IMAGES.constructionSunset} />
     </>
