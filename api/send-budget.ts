@@ -91,23 +91,14 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
   `;
 
   try {
-    await resend.emails.send({
-      from: process.env.FROM_EMAIL ?? "Loco Tracos <onboarding@resend.dev>",
-      to: process.env.TO_EMAIL,
-      replyTo: email,
-      subject: `Novo pedido de orcamento - ${servico || nome}`,
+    const data = await resend.emails.send({
+      from: "Loco Traços <site@locotracos.ao>",
+      to: [process.env.TO_EMAIL as string],
+      subject: "Novo Pedido de Orçamento",
       html,
-      text: [
-        "Novo pedido de orcamento",
-        `Nome: ${nome}`,
-        `Telefone: ${telefone}`,
-        `E-mail: ${email}`,
-        `Servico: ${servico}`,
-        `Mensagem: ${mensagem}`,
-      ].join("\n"),
     });
 
-    return res.status(200).json({ ok: true });
+    return res.status(200).json({ ok: true, data });
   } catch (error) {
     console.error("Resend error:", error);
     return res.status(502).json({ error: "Nao foi possivel enviar o e-mail." });
