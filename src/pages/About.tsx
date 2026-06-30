@@ -224,7 +224,7 @@ export function About() {
           </>
         }
         subtitle="Jovem, ousada e inovadora, uma empresa angolana dedicada a excelencia em arquitetura, engenharia e consultoria tecnica."
-        image={IMAGES.facadeUrban}
+        image={IMAGES.villaDusk}
       />
       <History />
       <Pillars />

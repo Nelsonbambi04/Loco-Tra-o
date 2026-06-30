@@ -284,7 +284,6 @@ export const GALLERY_PROJECTS: { name: string; location: string; image: string }
     { name: "Instituto Politecnico Medio", location: "Provincia do Cuando Cubango", image: IMAGES.facadeMinimal },
     { name: "Complexo Residencial Kilamba", location: "Municipio do Kilamba Kiaxi", image: IMAGES.apartments },
     { name: "Loja Wavida", location: "Maculusso, Luanda", image: IMAGES.interiorStylish },
-    { name: "Clinica de Estetica +Top", location: "Luanda, Angola", image: IMAGES.interiorBlue },
   ];
 
 export const SERVICE_OPTIONS = [
