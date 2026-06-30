@@ -29,18 +29,18 @@ function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-white pt-28 sm:pt-32 lg:pt-36">
-      <div className="absolute right-0 top-0 hidden h-full w-[42%] bg-petroleum-950 lg:block" />
-      <div className="absolute right-[34%] top-0 hidden h-48 w-36 bg-sand-500 lg:block" />
+      <div className="absolute right-0 top-0 hidden h-full w-[18%] bg-petroleum-950 lg:block" />
+      <div className="absolute right-[13%] top-0 hidden h-48 w-36 bg-sand-500 lg:block" />
 
       <Container className="relative">
-        <div className="grid min-h-[680px] items-center gap-10 lg:grid-cols-[0.94fr_1.06fr] lg:gap-14">
+        <div className="flex min-h-[680px] items-center">
           <Reveal>
-            <div className="max-w-xl py-10 lg:py-20">
+            <div className="max-w-4xl py-10 lg:py-20">
               <Eyebrow>Loco Traços, LDA</Eyebrow>
-              <h1 className="mt-6 font-display text-[2.35rem] font-black uppercase leading-[1.02] tracking-tight text-petroleum-950 sm:text-5xl lg:text-[4.6rem]">
+              <h1 className="mt-6 max-w-5xl font-display text-[2.35rem] font-black uppercase leading-[1.02] tracking-tight text-petroleum-950 sm:text-5xl lg:text-[5.2rem]">
                 Construção com rigor, projeto e fiscalização num só lugar.
               </h1>
-              <p className="mt-6 max-w-lg text-base leading-8 text-charcoal/68 sm:text-lg">
+              <p className="mt-6 max-w-2xl text-base leading-8 text-charcoal/68 sm:text-lg">
                 Do desenho técnico à entrega da chave, concebemos, fiscalizamos
                 e executamos obras com transparência, controlo de qualidade e
                 padrão profissional.
@@ -75,25 +75,6 @@ function Hero() {
             </div>
           </Reveal>
 
-          <Reveal delay={120}>
-            <div className="relative pb-10 lg:py-16">
-              <div className="relative ml-auto max-w-[650px] bg-white p-3 shadow-[0_30px_80px_rgba(17,22,26,0.24)]">
-                <img
-                  src={IMAGES.facadeGlass}
-                  alt="Projeto moderno desenvolvido pela Loco Traços"
-                  className="h-[430px] w-full object-cover sm:h-[560px]"
-                />
-                <div className="absolute bottom-8 left-8 max-w-[16rem] bg-white p-5 shadow-xl">
-                  <p className="text-[0.66rem] font-black uppercase tracking-[0.18em] text-sand-600">
-                    Angola
-                  </p>
-                  <p className="mt-2 font-display text-lg font-black leading-tight text-petroleum-950">
-                    Projetos, fiscalização e execução com acompanhamento técnico.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </Container>
     </section>

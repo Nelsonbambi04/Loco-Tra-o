@@ -17,9 +17,9 @@ export function PageHero({
   align?: "center" | "left";
 }) {
   return (
-    <section className="relative flex min-h-svh overflow-hidden bg-[#dedede] pt-20 sm:pt-24 lg:pt-28">
-      <Container className="relative flex w-full max-w-none px-0 pb-0 sm:px-5 sm:pb-5 lg:px-10 lg:pb-8">
-        <div className="relative flex min-h-[calc(100svh-5rem)] w-full overflow-hidden bg-white shadow-[0_18px_48px_rgba(17,22,26,0.18)] sm:min-h-[calc(100svh-7.25rem)] lg:min-h-[calc(100svh-8.5rem)]">
+    <section className="relative flex min-h-svh overflow-hidden bg-white pt-20 sm:pt-24 lg:pt-28">
+      <Container className="relative flex w-full max-w-none px-0 pb-0">
+        <div className="relative flex min-h-[calc(100svh-5rem)] w-full overflow-hidden bg-white sm:min-h-[calc(100svh-6rem)] lg:min-h-[calc(100svh-7rem)]">
           <div className="absolute -top-24 left-1/2 h-44 w-72 -translate-x-1/2 rounded-b-[4rem] bg-gradient-to-br from-sand-500 to-[#15c6d4]" />
           <div className="absolute right-7 top-7 hidden h-2.5 w-9 rounded-full bg-sand-600 sm:block" />
 

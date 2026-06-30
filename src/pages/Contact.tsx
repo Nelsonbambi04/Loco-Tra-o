@@ -277,7 +277,7 @@ export function Contact() {
   const mapsEmbed = `https://www.google.com/maps?q=${encodeURIComponent(
     COMPANY.mapsQuery,
   )}&output=embed`;
-  const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  const mapsLink = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
     COMPANY.mapsQuery,
   )}`;
 
@@ -343,7 +343,7 @@ export function Contact() {
               <Reveal delay={200}>
                 <div className="mt-6">
                   <Button href={mapsLink} variant="primary" size="md">
-                    Abrir no Google Maps
+                    Pedir Direcao
                     <ArrowRight />
                   </Button>
                 </div>

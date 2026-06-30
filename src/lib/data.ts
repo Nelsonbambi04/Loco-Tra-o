@@ -16,7 +16,7 @@ export const COMPANY = {
     "Rua Luther King, Bairro do Maculusso, Distrito Urbano da Maianga, Luanda, Angola",
   reference:
     "Via que liga a Avenida de Portugal à Avenida Comandante Che Guevara - próximo à Angola Business School e ao Restaurante Mercado do Peixe.",
-  mapsQuery: "Rua Luther King, Maculusso, Luanda, Angola",
+  mapsQuery: "-8.8190521,13.2392596",
 };
 
 export const NAV_ITEMS: { id: PageId; label: string }[] = [
