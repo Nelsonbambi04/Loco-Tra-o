@@ -132,13 +132,13 @@ function ContactForm() {
       ) : (
         <form onSubmit={onSubmit} noValidate className="flex flex-col gap-5">
           <div>
-            <Eyebrow>Formulario de Orcamento</Eyebrow>
+            <Eyebrow>Formulario de Proposta</Eyebrow>
             <h3 className="mt-3 font-serif text-2xl font-semibold text-petroleum-950 sm:text-3xl">
               Fale Connosco
             </h3>
             <p className="mt-2 text-sm text-charcoal/60">
-              Preencha os dados abaixo. Respondemos com um orcamento a medida do
-              seu projeto.
+              Preencha os dados abaixo. Respondemos com uma proposta a medida
+              para arquitetura, interiores ou apoio tecnico ao seu projeto.
             </p>
           </div>
 
@@ -217,7 +217,7 @@ function ContactForm() {
               value={form.mensagem}
               onChange={(e) => update("mensagem", e.target.value)}
               rows={5}
-              placeholder="Descreva o seu projeto, localizacao e necessidades..."
+              placeholder="Descreva o espaco, localizacao, estilo pretendido e necessidades tecnicas..."
               className={`${fieldClass("mensagem")} resize-none`}
             />
             {errors.mensagem && (
@@ -327,7 +327,7 @@ export function Contact() {
             Vamos dar o primeiro<br className="hidden sm:block" /> passo juntos
           </>
         }
-        subtitle="Solicite um orcamento sem compromisso ou visite-nos no nosso escritorio em Luanda."
+        subtitle="Solicite uma proposta para arquitetura, interiores ou apoio tecnico, ou visite-nos no nosso escritorio em Luanda."
         image={IMAGES.facadeGlass}
         align="left"
       />

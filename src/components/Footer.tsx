@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, FileText } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { useNav } from "@/lib/navigation";
 import { COMPANY, NAV_ITEMS, SERVICES } from "@/lib/data";
 import { Logo } from "./Logo";
@@ -35,9 +35,9 @@ export function Footer() {
             <Logo onClick={() => navigate("home")} />
           </div>
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-petroleum-100/70">
-            Arquitetura, design e engenharia de referência em Angola. Soluções
-            integradas que transformam o seu projeto em realidade — do
-            planeamento aos acabamentos.
+            Arquitetura, design e engenharia de referência em Angola. Criamos
+            espaços com conceito, função e rigor técnico, do estudo inicial aos
+            acabamentos.
           </p>
           <p className="mt-6 font-serif text-xl italic text-sand-300">
             “{COMPANY.slogan}”
@@ -126,12 +126,6 @@ export function Footer() {
                 <Mail className="h-4 w-4 shrink-0 text-sand-400" strokeWidth={1.8} />
                 {COMPANY.email}
               </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <FileText className="h-4 w-4 shrink-0 text-sand-400" strokeWidth={1.8} />
-              <span>
-                NIF <span className="font-semibold text-white">{COMPANY.nif}</span>
-              </span>
             </li>
           </ul>
         </div>

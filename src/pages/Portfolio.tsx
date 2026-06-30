@@ -25,7 +25,7 @@ function FeaturedProjects() {
               Projetos <span className="text-sand-500">recentes</span>
             </>
           }
-          intro="Uma amostra das obras residenciais, comerciais e institucionais que contaram com a assinatura de excelencia Loco Tracos."
+          intro="Uma amostra de projetos residenciais, comerciais e institucionais onde arquitetura, interiores e rigor tecnico trabalham em conjunto."
         />
 
         <div className="mt-10 grid gap-7 sm:mt-12">
@@ -95,11 +95,11 @@ function Gallery() {
           eyebrow="Galeria"
           title={
             <>
-              Mais obras com a nossa{" "}
+              Mais projetos com a nossa{" "}
               <span className="text-sand-500">assinatura</span>
             </>
           }
-          intro="Residencias, edificios, clinicas, igrejas e espacos comerciais entregues em varias provincias de Angola."
+          intro="Residencias, edificios, clinicas, igrejas e espacos comerciais concebidos ou acompanhados tecnicamente em varias provincias de Angola."
         />
 
         <div className="mt-9 grid grid-cols-2 gap-4 sm:mt-12 sm:grid-cols-3 lg:grid-cols-4">
@@ -136,8 +136,8 @@ function Gallery() {
 function PortfolioStats() {
   const stats = [
     { value: 4, suffix: "", label: "Provincias alcancadas" },
-    { value: 14, suffix: "+", label: "Obras no portefolio" },
-    { value: 100, suffix: "%", label: "Foco nos acabamentos" },
+    { value: 14, suffix: "+", label: "Projetos no portfolio" },
+    { value: 100, suffix: "%", label: "Foco no detalhe" },
   ];
 
   return (
@@ -171,10 +171,10 @@ export function Portfolio() {
         eyebrow="Portfolio"
         title={
           <>
-            Obras que falam por<br className="hidden sm:block" /> si mesmas
+            Projetos que falam por<br className="hidden sm:block" /> si mesmos
           </>
         }
-        subtitle="Residencial, comercial e institucional, cada projeto reflete o nosso compromisso com a excelencia."
+        subtitle="Residencial, comercial e institucional, cada espaco reflete o nosso compromisso com arquitetura, detalhe e rigor tecnico."
         image={IMAGES.villaDusk}
       />
       <FeaturedProjects />

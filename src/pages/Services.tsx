@@ -23,10 +23,10 @@ function Intro() {
             title={
               <>
                 Nossas soluções em{" "}
-                <span className="text-sand-500">construção e design</span>
+                <span className="text-sand-500">arquitetura e engenharia</span>
               </>
             }
-            intro="Oferecemos serviços de alta qualidade, cumprindo rigorosamente os prazos e orçamentos estabelecidos, do conceito à entrega."
+            intro="Começamos pela arquitetura e apoiamos cada projeto com engenharia, fiscalização e execução técnica para garantir beleza, função e viabilidade."
           />
           <Reveal delay={120}>
             <div className="bg-white p-6 shadow-[0_14px_38px_rgba(17,22,26,0.14)]">
@@ -121,22 +121,22 @@ function Process() {
     {
       n: "01",
       title: "Estudo & Levantamento",
-      text: "Topografia, análise do terreno e briefing detalhado para entender cada necessidade.",
+      text: "Briefing, terreno, programa e referências para definir a direção arquitetónica.",
     },
     {
       n: "02",
       title: "Projeto & Planeamento",
-      text: "Desenvolvimento arquitetónico e de engenharia, com cronograma e orçamento claros.",
+      text: "Desenvolvimento arquitetónico, interiores e especialidades com cronograma e orçamento claros.",
     },
     {
       n: "03",
-      title: "Execução & Fiscalização",
-      text: "Construção com mão-de-obra especializada e controlo rigoroso de qualidade e segurança.",
+      title: "Engenharia & Fiscalização",
+      text: "Compatibilização técnica, acompanhamento de obra e controlo rigoroso de qualidade.",
     },
     {
       n: "04",
       title: "Entrega & Acabamento",
-      text: "Reabilitação, acabamentos premium e entrega da obra pronta a ser vivida.",
+      text: "Acabamentos, documentação e entrega do espaço pronto a ser vivido.",
     },
   ];
 
@@ -147,8 +147,8 @@ function Process() {
           align="center"
           tone="light"
           eyebrow="O Nosso Processo"
-          title="Da primeira visita à última chave"
-          intro="Um método estruturado que garante transparência, qualidade e cumprimento de prazos em cada etapa."
+          title="Do conceito arquitetónico à entrega"
+          intro="Um método estruturado que garante clareza criativa, rigor técnico e cumprimento de prazos em cada etapa."
           className="mx-auto items-center"
         />
 
@@ -179,11 +179,11 @@ export function Services() {
         eyebrow="Serviços"
         title={
           <>
-            Excelência em cada<br className="hidden sm:block" /> etapa da obra
+            Arquitetura em primeiro,<br className="hidden sm:block" /> engenharia a dar suporte
           </>
         }
-        subtitle="Construção civil, arquitetura, fiscalização, topografia, consultoria e plotter, tudo o que o seu projeto precisa, num só lugar."
-        image={IMAGES.constructionDiscuss}
+        subtitle="Projetos de arquitetura, interiores, engenharia, fiscalização, topografia, construção e plotter, tudo o que o seu projeto precisa, num só lugar."
+        image={IMAGES.interiorBlue}
       />
       <Intro />
       <ServiceGrid />

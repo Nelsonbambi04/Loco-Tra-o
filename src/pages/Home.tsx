@@ -1,12 +1,9 @@
 import {
   ArrowUpRight,
-  CheckCircle2,
-  ClipboardCheck,
   Printer,
 } from "lucide-react";
 import { useNav } from "@/lib/navigation";
 import {
-  COMPANY,
   DIFFERENTIALS,
   FEATURED_PROJECTS,
   IMAGES,
@@ -31,7 +28,7 @@ function Hero() {
     <section className="relative overflow-hidden bg-petroleum-950 pt-28 text-white sm:pt-32 lg:pt-36">
       <div className="absolute inset-0">
         <img
-          src={IMAGES.constructionSunset}
+          src={IMAGES.villaDusk}
           alt=""
           className="h-full w-full object-cover"
         />
@@ -47,12 +44,12 @@ function Hero() {
             <div className="max-w-4xl py-10 lg:py-20">
               <Eyebrow>Loco Traços, LDA</Eyebrow>
               <h1 className="mt-6 max-w-5xl font-display text-[2.35rem] font-black uppercase leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-[5.2rem]">
-                Construção com rigor, projeto e fiscalização num só lugar.
+                Arquitetura com rigor, conceito e engenharia num só lugar.
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-8 text-white/78 sm:text-lg">
-                Do desenho técnico à entrega da chave, concebemos, fiscalizamos
-                e executamos obras com transparência, controlo de qualidade e
-                padrão profissional.
+                Concebemos espaços funcionais e elegantes, com engenharia,
+                fiscalização e execução técnica para transformar ideias em
+                projetos prontos a viver.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -99,16 +96,16 @@ function Expertise() {
             eyebrow="Bem-vindo à Loco Traços"
             title={
               <>
-                Uma equipa para planear, fiscalizar e{" "}
-                <span className="text-sand-500">executar com precisão.</span>
+                Uma equipa para conceber, detalhar e{" "}
+                <span className="text-sand-500">dar forma ao espaço.</span>
               </>
             }
-            intro="Unimos engenharia, arquitetura, construção civil, topografia, consultoria e serviços de plotter para apoiar o seu projeto do início ao fim."
+            intro="A arquitetura orienta o processo. A engenharia, a topografia, a fiscalização, a construção e o plotter garantem que cada ideia seja tecnicamente clara e executável."
           />
 
           <Reveal delay={120}>
             <div className="grid grid-cols-3 border border-petroleum-900/10 bg-white">
-              {["Projeto", "Fiscalização", "Execução"].map((item, index) => (
+              {["Arquitetura", "Engenharia", "Execução"].map((item, index) => (
                 <div
                   key={item}
                   className="border-r border-petroleum-900/10 p-5 last:border-r-0"
@@ -158,11 +155,11 @@ function ServicesOverview() {
             eyebrow="Serviços"
             title={
               <>
-                Soluções técnicas para cada{" "}
-                <span className="text-sand-500">fase da obra.</span>
+                Soluções para cada{" "}
+                <span className="text-sand-500">fase do projeto.</span>
               </>
             }
-            intro="Da conceção arquitetónica à impressão técnica em plotter, a Loco Traços organiza o processo com método e responsabilidade."
+            intro="Da conceção arquitetónica à engenharia, fiscalização, construção e impressão técnica, organizamos o processo com método e responsabilidade."
           />
           <Button variant="outline" onClick={() => navigate("services")}>
             Todos os serviços
@@ -201,10 +198,10 @@ function ServicesOverview() {
 
 function Process() {
   const steps = [
-    ["01", "Levantamento", "Entendemos o terreno, o objetivo do cliente e as necessidades técnicas."],
-    ["02", "Projeto", "Organizamos desenho, planeamento, orçamento e soluções construtivas."],
-    ["03", "Execução", "Acompanhamos obra, qualidade, segurança, prazos e acabamentos."],
-    ["04", "Entrega", "Fechamos o processo com documentação, revisão e apoio técnico."],
+    ["01", "Conceito", "Traduzimos o programa, o terreno e a identidade do cliente numa direção arquitetónica clara."],
+    ["02", "Projeto", "Desenvolvemos desenho, modelação, planeamento, orçamento e soluções técnicas."],
+    ["03", "Engenharia", "Compatibilizamos especialidades, qualidade, segurança, prazos e viabilidade de execução."],
+    ["04", "Entrega", "Fechamos o processo com revisão, acabamentos e apoio técnico ao cliente."],
   ];
 
   return (
@@ -214,8 +211,8 @@ function Process() {
           <SectionHeading
             tone="light"
             eyebrow="Processo"
-            title="Um método claro para reduzir riscos e controlar custos."
-            intro="Cada fase tem uma responsabilidade definida para que o cliente acompanhe decisões, prazos e evolução da obra com clareza."
+            title="Um método claro para transformar conceito em projeto executável."
+            intro="Cada fase tem uma responsabilidade definida para que o cliente acompanhe decisões arquitetónicas, soluções técnicas e evolução da obra com clareza."
           />
 
           <div className="grid gap-4 sm:grid-cols-2">
@@ -250,11 +247,11 @@ function FeaturedWork() {
             eyebrow="Portfólio"
             title={
               <>
-                Obras e conceitos com a{" "}
+                Projetos e espaços com a{" "}
                 <span className="text-sand-500">nossa assinatura.</span>
               </>
             }
-            intro="Uma amostra de projetos residenciais, comerciais e institucionais desenvolvidos pela equipa Loco Traços."
+            intro="Uma amostra de arquitetura residencial, comercial e institucional desenvolvida pela equipa Loco Traços."
           />
           <Button variant="dark" onClick={() => navigate("portfolio")}>
             Ver portfólio
@@ -331,7 +328,7 @@ function FinalCta() {
       <div className="absolute inset-0">
         <img
           src={IMAGES.constructionSunset}
-          alt="Construção civil Loco Traços"
+          alt="Arquitetura e projeto Loco Traços"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-petroleum-950/78" />
@@ -343,11 +340,11 @@ function FinalCta() {
               Fale connosco
             </p>
             <h2 className="mt-4 font-display text-3xl font-black uppercase leading-tight sm:text-5xl">
-              Vamos dar forma ao seu próximo projeto.
+              Vamos desenhar o seu próximo espaço.
             </h2>
             <p className="mt-5 text-base leading-8 text-white/72">
-              Solicite um orçamento sem compromisso e receba apoio técnico para
-              escolher a melhor solução para a sua obra.
+              Solicite uma proposta sem compromisso e receba apoio arquitetónico
+              e técnico para escolher a melhor solução para o seu projeto.
             </p>
             <div className="mt-8">
               <Button variant="primary" size="lg" onClick={() => navigate("contact")}>

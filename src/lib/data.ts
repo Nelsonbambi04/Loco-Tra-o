@@ -1,13 +1,9 @@
 import type { PageId } from "./navigation";
 
-/* ------------------------------------------------------------------ */
-/* Company                                                             */
-/* ------------------------------------------------------------------ */
-
 export const COMPANY = {
-  name: "Loco Traços",
-  legalName: "Loco Traços - Angola",
-  slogan: "Estamos construindo o seu sorriso.",
+  name: "Loco Tracos",
+  legalName: "Loco Tracos - Angola",
+  slogan: "Arquitetura que ganha forma com rigor tecnico.",
   founded: 2020,
   nif: "5000510661",
   phones: ["+244 925 783 201", "+244 925 732 355"],
@@ -15,21 +11,17 @@ export const COMPANY = {
   address:
     "Rua Luther King, Bairro do Maculusso, Distrito Urbano da Maianga, Luanda, Angola",
   reference:
-    "Via que liga a Avenida de Portugal à Avenida Comandante Che Guevara - próximo à Angola Business School e ao Restaurante Mercado do Peixe.",
+    "Via que liga a Avenida de Portugal a Avenida Comandante Che Guevara - proximo a Angola Business School e ao Restaurante Mercado do Peixe.",
   mapsQuery: "-8.8190521,13.2392596",
 };
 
 export const NAV_ITEMS: { id: PageId; label: string }[] = [
-  { id: "home", label: "Início" },
+  { id: "home", label: "Inicio" },
   { id: "about", label: "A Empresa" },
-  { id: "services", label: "Serviços" },
-  { id: "portfolio", label: "Portfólio" },
+  { id: "services", label: "Servicos" },
+  { id: "portfolio", label: "Portfolio" },
   { id: "contact", label: "Contactos" },
 ];
-
-/* ------------------------------------------------------------------ */
-/* Imagery extracted from the company portfolio PDF                    */
-/* ------------------------------------------------------------------ */
 
 const pdfAsset = (file: string) => `/portfolio-pdf/${file}`;
 
@@ -60,44 +52,38 @@ export const IMAGES = {
   teamHelmets: pdfAsset("pdf-image-008-obj-75.jpg"),
   teamWomen: pdfAsset("pdf-image-016-obj-115.jpg"),
   consultingSite: pdfAsset("pdf-image-011-obj-88.jpg"),
+  plotterPrint:
+    "https://images.pexels.com/photos/9565383/pexels-photo-9565383.jpeg?auto=compress&cs=tinysrgb&w=1400",
   interiorChandelier: pdfAsset("pdf-image-050-obj-239.jpg"),
   interiorBlue: pdfAsset("pdf-image-051-obj-240.jpg"),
   interiorMinimal: pdfAsset("pdf-image-027-obj-174.jpg"),
   interiorStylish: pdfAsset("pdf-image-051-obj-240.jpg"),
 };
 
-/* ------------------------------------------------------------------ */
-/* Differentials / stats                                               */
-/* ------------------------------------------------------------------ */
-
 export const DIFFERENTIALS = [
   {
     icon: "award",
-    title: "Experiência Consolidada",
-    text: "Atuação sólida e reconhecida no mercado da construção civil angolano, com um portefólio de obras públicas e privadas entregues com excelência.",
+    title: "Arquitetura com Visao",
+    text: "Concebemos projetos arquitetonicos funcionais, elegantes e adaptados ao contexto angolano, sempre com foco na experiencia de quem vai viver ou usar o espaco.",
   },
   {
     icon: "users",
     title: "Equipa Multidisciplinar",
-    text: "Engenheiros, arquitetos e técnicos habilitados que unem rigor técnico e criatividade para entregar projetos de alto padrão.",
+    text: "Arquitetos, engenheiros e tecnicos trabalham em conjunto para transformar conceito, tecnica e obra num resultado coerente e de alto padrao.",
   },
   {
     icon: "cpu",
     title: "Tecnologia & Controlo",
-    text: "Softwares de ponta e controlo rígido de qualidade e segurança em todas as etapas, do estudo topográfico ao acabamento final.",
+    text: "Modelacao, desenho tecnico, acompanhamento e controlo de qualidade apoiam cada decisao, do estudo inicial aos acabamentos finais.",
   },
 ];
 
 export const STATS = [
   { value: 2020, label: "Fundada", suffix: "" },
   { value: 30, label: "Projetos entregues", suffix: "+" },
-  { value: 6, label: "Áreas de atuação", suffix: "" },
+  { value: 6, label: "Areas de atuacao", suffix: "" },
   { value: 100, label: "Foco em qualidade", suffix: "%" },
 ];
-
-/* ------------------------------------------------------------------ */
-/* Services                                                            */
-/* ------------------------------------------------------------------ */
 
 export type Service = {
   slug: string;
@@ -112,65 +98,65 @@ export type Service = {
 
 export const SERVICES: Service[] = [
   {
-    slug: "construcao-civil",
-    index: "01",
-    title: "Construção Civil e Empreitadas",
-    short: "Execução completa de obras públicas e privadas.",
-    description:
-      "Execução completa de empreitadas de obras públicas e privadas com alto padrão construtivo. Cuidamos de todo o ciclo da obra com planeamento rigoroso e mão-de-obra especializada.",
-    bullets: [
-      "Planeamento e preparo do solo",
-      "Alvenaria, estruturas e coberturas",
-      "Reabilitações em geral",
-      "Obras públicas e privadas",
-    ],
-    image: IMAGES.constructionDiscuss,
-    icon: "hard-hat",
-  },
-  {
     slug: "arquitetura-design",
-    index: "02",
-    title: "Projetos de Arquitetura & Design",
-    short: "Projetos inovadores, funcionais e personalizados.",
+    index: "01",
+    title: "Arquitetura & Design",
+    short: "Concecao arquitetonica, interiores e experiencia espacial.",
     description:
-      "Desenvolvimento de projetos arquitetónicos inovadores, funcionais e personalizados, além de design de interiores sofisticado para comércio, clínicas e residências.",
+      "Desenvolvemos projetos arquitetonicos inovadores, funcionais e personalizados, com leitura cuidada do terreno, do programa e da identidade de cada cliente.",
     bullets: [
-      "Projetos arquitetónicos personalizados",
-      "Design de interiores sofisticado",
-      "Comércio, clínicas e residências",
-      "Apresentações 2D e 3D",
+      "Projetos arquitetonicos personalizados",
+      "Design de interiores e conceito espacial",
+      "Comercio, clinicas e residencias",
+      "Apresentacoes 2D, 3D e apoio visual",
     ],
     image: IMAGES.interiorBlue,
     icon: "compass",
   },
   {
-    slug: "fiscalizacao-direcao",
-    index: "03",
-    title: "Fiscalização, Gestão e Direção de Obras",
-    short: "Monitoramento no terreno por profissionais habilitados.",
+    slug: "engenharia-fiscalizacao",
+    index: "02",
+    title: "Engenharia & Fiscalizacao",
+    short: "Rigor tecnico para tornar o projeto executavel.",
     description:
-      "Monitoramento completo no terreno por profissionais habilitados, para assegurar o cumprimento estrito das normas técnicas, de segurança e das especificações do projeto.",
+      "Apoiamos a arquitetura com engenharia, fiscalizacao e gestao tecnica, garantindo compatibilidade, seguranca, qualidade e cumprimento das especificacoes do projeto.",
     bullets: [
-      "Direção e fiscalização de obra",
-      "Cumprimento de normas e segurança",
+      "Fiscalizacao e direcao tecnica",
+      "Compatibilizacao de especialidades",
       "Controlo de qualidade e prazos",
-      "Gestão transparente da empreitada",
+      "Gestao transparente da empreitada",
     ],
     image: IMAGES.teamHardHats,
     icon: "clipboard-check",
   },
   {
+    slug: "construcao-civil",
+    index: "03",
+    title: "Construcao Civil e Empreitadas",
+    short: "Execucao de obras alinhada ao projeto arquitetonico.",
+    description:
+      "Executamos obras publicas e privadas com planeamento rigoroso, mao-de-obra especializada e respeito pela intencao arquitetonica definida em projeto.",
+    bullets: [
+      "Planeamento e preparo do solo",
+      "Alvenaria, estruturas e coberturas",
+      "Reabilitacoes em geral",
+      "Obras publicas e privadas",
+    ],
+    image: IMAGES.constructionDiscuss,
+    icon: "hard-hat",
+  },
+  {
     slug: "topografia",
     index: "04",
-    title: "Engenharia Geográfica e Topografia",
-    short: "Levantamentos precisos e georreferenciamento.",
+    title: "Topografia & Implantacao",
+    short: "Base tecnica precisa para projetar e implantar.",
     description:
-      "Estudos topográficos detalhados e levantamento topográfico preciso, garantindo a implantação correta da obra desde o primeiro levantamento.",
+      "Realizamos levantamentos topograficos, implantacao e apoio ao projeto para que a arquitetura responda corretamente ao terreno e ao contexto.",
     bullets: [
-      "Estudos e levantamento topográfico",
-      "Implantação e nivelamento de obra",
+      "Estudos e levantamento topografico",
+      "Implantacao e nivelamento de obra",
       "Georreferenciamento",
-      "Apoio ao projeto e execução",
+      "Apoio ao projeto e execucao",
     ],
     image: IMAGES.facadeMinimal,
     icon: "map",
@@ -178,15 +164,15 @@ export const SERVICES: Service[] = [
   {
     slug: "consultoria",
     index: "05",
-    title: "Consultoria e Serviços Técnicos",
-    short: "Avaliação, consultoria e formação especializada.",
+    title: "Consultoria Tecnica",
+    short: "Apoio especializado para decidir melhor antes de construir.",
     description:
-      "Avaliação imobiliária detalhada, consultoria de engenharia, serviços de impressão e encadernação técnica, e formação especializada em diversas áreas.",
+      "Prestamos consultoria arquitetonica e tecnica, avaliacao imobiliaria e apoio a decisoes de projeto, custos, viabilidade e formacao especializada.",
     bullets: [
-      "Avaliação imobiliária detalhada",
-      "Consultoria de engenharia",
-      "Impressão e encadernação técnica",
-      "Formação: Orçamentos, Medições, AutoCAD 2D/3D",
+      "Consultoria arquitetonica e tecnica",
+      "Avaliacao imobiliaria detalhada",
+      "Orcamentos, medicoes e viabilidade",
+      "Formacao em AutoCAD 2D/3D",
     ],
     image: IMAGES.consultingSite,
     icon: "graduation-cap",
@@ -194,57 +180,49 @@ export const SERVICES: Service[] = [
   {
     slug: "servicos-plotter",
     index: "06",
-    title: "Serviços de Plotter",
-    short: "Impressões técnicas de A4 até A0+, cortes e dobragem de folhas.",
+    title: "Servicos de Plotter",
+    short: "Impressao de plantas, desenhos tecnicos e pranchas.",
     description:
-      "Serviços de plotter para impressão de desenhos técnicos, plantas, mapas e documentos de engenharia, com formatos desde A4 até A0+, incluindo corte, acabamento e dobragem de folhas.",
+      "Servicos de plotter para impressao de projetos arquitetonicos, plantas, mapas e documentos tecnicos, com formatos desde A4 ate A0+, incluindo corte, acabamento e dobragem de folhas.",
     bullets: [
-      "Impressões de A4 até A0+",
-      "Plantas, desenhos técnicos e mapas",
+      "Impressoes de A4 ate A0+",
+      "Plantas, pranchas e desenhos tecnicos",
       "Cortes e acabamento de folhas",
-      "Dobragem técnica para arquivo e entrega",
+      "Dobragem tecnica para arquivo e entrega",
     ],
-    image: IMAGES.facadeClinic,
+    image: IMAGES.plotterPrint,
     icon: "printer",
   },
 ];
 
-/* ------------------------------------------------------------------ */
-/* Institutional pillars                                               */
-/* ------------------------------------------------------------------ */
-
 export const PILLARS = [
   {
     key: "missao",
-    label: "Missão",
+    label: "Missao",
     icon: "target",
-    text: "Atender com excelência as demandas dos nossos clientes, prestando serviços que contribuam diretamente para a melhoria da qualidade de vida das pessoas.",
+    text: "Criar arquitetura de qualidade, funcional e duradoura, apoiada por engenharia rigorosa e por uma relacao transparente com cada cliente.",
   },
   {
     key: "visao",
-    label: "Visão",
+    label: "Visao",
     icon: "eye",
-    text: "Ser uma empresa de referência em Angola, reconhecida como a melhor opção por clientes, parceiros, colaboradores e investidores, pela qualidade impecável dos serviços e um atendimento totalmente diferenciado.",
+    text: "Ser uma referencia em Angola em projetos de arquitetura, interiores e acompanhamento tecnico, reconhecida pela qualidade dos espacos que concebe e entrega.",
   },
   {
     key: "valores",
     label: "Valores",
     icon: "gem",
-    text: "Princípios que guiam cada projeto e cada relação que construímos.",
+    text: "Principios que guiam cada projeto, cada decisao tecnica e cada relacao que construimos.",
   },
 ];
 
 export const VALUES = [
-  { title: "Competência e Rigor Técnico", icon: "ruler" },
-  { title: "Inovação e Criatividade", icon: "lightbulb" },
-  { title: "Pontualidade e Prontidão", icon: "clock" },
-  { title: "Confidencialidade e Responsabilidade Social", icon: "shield" },
-  { title: "Espírito de Equipa e Parceria", icon: "handshake" },
+  { title: "Criatividade com rigor tecnico", icon: "ruler" },
+  { title: "Funcionalidade e conforto", icon: "lightbulb" },
+  { title: "Pontualidade e prontidao", icon: "clock" },
+  { title: "Confidencialidade e responsabilidade social", icon: "shield" },
+  { title: "Espirito de equipa e parceria", icon: "handshake" },
 ];
-
-/* ------------------------------------------------------------------ */
-/* Portfolio                                                           */
-/* ------------------------------------------------------------------ */
 
 export type Project = {
   name: string;
@@ -258,102 +236,62 @@ export type Project = {
 
 export const FEATURED_PROJECTS: Project[] = [
   {
-    name: "Clínica Odonto Excellence",
+    name: "Clinica Odonto Excellence",
     type: "Design Comercial & Arquitetura de Interiores",
     location: "Avenida Deolinda Rodrigues, Luanda",
     highlight:
-      "Intervenção em fachada, otimização dos espaços de atendimento clínico e acompanhamento técnico da execução.",
+      "Intervencao em fachada, otimizacao dos espacos de atendimento clinico e acompanhamento tecnico da execucao.",
     image: IMAGES.facadeGlass,
-    tag: "Clínica",
+    tag: "Clinica",
   },
   {
-    name: "Reabilitação da Administração do F.A.S",
-    type: "Obra Institucional / Pública",
-    location: "Camabatela, Província do Kwanza Norte",
+    name: "Reabilitacao da Administracao do F.A.S",
+    type: "Arquitetura Institucional / Reabilitacao",
+    location: "Camabatela, Provincia do Kwanza Norte",
     highlight:
-      "Reabilitação institucional com foco em funcionalidade, durabilidade e melhoria das condições de utilização.",
+      "Reabilitacao institucional com foco em funcionalidade, durabilidade e melhoria das condicoes de utilizacao.",
     image: IMAGES.facadeUrban,
-    tag: "Pública",
+    tag: "Institucional",
   },
   {
-    name: "Residência Cirilo",
-    type: "Arquitetura Residencial de Alto Padrão",
-    location: "Bairro Kikagil, Município de Luanda",
+    name: "Residencia Cirilo",
+    type: "Arquitetura Residencial de Alto Padrao",
+    location: "Bairro Kikagil, Municipio de Luanda",
     description:
-      "Projeto residencial moderno composto por sala de estar, sala de jantar, 4 quartos, cozinha planeada, piscina e terraço sofisticado.",
+      "Projeto residencial moderno composto por sala de estar, sala de jantar, 4 quartos, cozinha planeada, piscina e terraco sofisticado.",
     image: IMAGES.villaDusk,
     tag: "Residencial",
   },
   {
-    name: "Condomínio Benfica",
-    type: "Projeto Urbanístico / Residencial",
-    location: "Distrito Urbano do Benfica, Município de Belas",
+    name: "Condominio Benfica",
+    type: "Arquitetura Urbanistica / Residencial",
+    location: "Distrito Urbano do Benfica, Municipio de Belas",
     highlight:
-      "Conceção urbanística integrada com foco em conforto, segurança e qualidade de vida.",
+      "Concecao urbanistica integrada com foco em conforto, seguranca e qualidade de vida.",
     image: IMAGES.apartments,
-    tag: "Urbanístico",
+    tag: "Urbanistico",
   },
 ];
 
 export const GALLERY_PROJECTS: { name: string; location: string; image: string }[] =
   [
-    {
-      name: "Casa Carlos",
-      location: "Bairro Kikagil, Luanda",
-      image: IMAGES.villaPool,
-    },
-    {
-      name: "Casa Luís Carlos",
-      location: "Município de Belas",
-      image: IMAGES.villaPool2,
-    },
-    {
-      name: "Edifício Residencial Camama",
-      location: "Camama, Município de Belas",
-      image: IMAGES.apartmentsGlass,
-    },
-    {
-      name: "Igreja Adventista",
-      location: "Distrito Urbano do Rangel",
-      image: IMAGES.facadeWhite,
-    },
-    {
-      name: "Casa Adilson Manuel",
-      location: "Centralidade do Kilamba, Belas",
-      image: IMAGES.villaIlluminated,
-    },
-    {
-      name: "Casa Idalina Reis",
-      location: "Zango 8000, Município de Viana",
-      image: IMAGES.villaStone,
-    },
-    {
-      name: "Instituto Politécnico Médio",
-      location: "Província do Cuando Cubango",
-      image: IMAGES.facadeMinimal,
-    },
-    {
-      name: "Complexo Residencial Kilamba",
-      location: "Município do Kilamba Kiaxi",
-      image: IMAGES.apartments,
-    },
-    {
-      name: "Loja Wavida",
-      location: "Maculusso, Luanda",
-      image: IMAGES.interiorStylish,
-    },
-    {
-      name: "Clínica de Estética +Top",
-      location: "Luanda, Angola",
-      image: IMAGES.interiorBlue,
-    },
+    { name: "Casa Carlos", location: "Bairro Kikagil, Luanda", image: IMAGES.villaPool },
+    { name: "Casa Luis Carlos", location: "Municipio de Belas", image: IMAGES.villaPool2 },
+    { name: "Edificio Residencial Camama", location: "Camama, Municipio de Belas", image: IMAGES.apartmentsGlass },
+    { name: "Igreja Adventista", location: "Distrito Urbano do Rangel", image: IMAGES.facadeWhite },
+    { name: "Casa Adilson Manuel", location: "Centralidade do Kilamba, Belas", image: IMAGES.villaIlluminated },
+    { name: "Casa Idalina Reis", location: "Zango 8000, Municipio de Viana", image: IMAGES.villaStone },
+    { name: "Instituto Politecnico Medio", location: "Provincia do Cuando Cubango", image: IMAGES.facadeMinimal },
+    { name: "Complexo Residencial Kilamba", location: "Municipio do Kilamba Kiaxi", image: IMAGES.apartments },
+    { name: "Loja Wavida", location: "Maculusso, Luanda", image: IMAGES.interiorStylish },
+    { name: "Clinica de Estetica +Top", location: "Luanda, Angola", image: IMAGES.interiorBlue },
   ];
 
 export const SERVICE_OPTIONS = [
-  "Construção",
   "Projeto de Arquitetura / Design",
-  "Fiscalização / Direção de Obra",
+  "Engenharia / Fiscalizacao",
+  "Construcao",
   "Topografia",
-  "Serviços de Plotter",
+  "Servicos de Plotter",
   "Consultoria / Outro",
 ];

@@ -59,8 +59,8 @@ export function PageHero({
 
 export function CTABand({
   eyebrow = "Vamos Conversar",
-  title = "Pronto para tirar a sua obra do papel?",
-  text = "Conte com uma equipa que cumpre prazos, orçamentos e respeita rigorosamente as normas técnicas.",
+  title = "Pronto para desenhar o seu espaço?",
+  text = "Conte com uma equipa que coloca a arquitetura em primeiro lugar e usa engenharia, planeamento e rigor técnico para tornar o projeto executável.",
   image,
 }: {
   eyebrow?: string;

@@ -29,7 +29,7 @@ function History() {
             <Reveal delay={120}>
               <p className="mt-5 text-sm leading-relaxed text-charcoal/72 sm:text-base">
                 Surgimos oficialmente no ano de {COMPANY.founded}, oferecendo
-                servicos integrados de engenharia, arquitetura e consultoria com
+                servicos integrados de arquitetura, engenharia e consultoria com
                 foco no mercado de Angola. Somos motivados pelo espirito de
                 missao e pela busca constante de criar um mundo melhor atraves
                 da arquitetura.
@@ -71,7 +71,7 @@ function History() {
                 Institucional
               </p>
               <p className="mt-2 text-sm leading-relaxed text-charcoal/70">
-                Engenharia, arquitetura e fiscalizacao com metodo, transparencia
+                Arquitetura, engenharia e fiscalizacao com metodo, transparencia
                 e rigor tecnico.
               </p>
             </div>
@@ -146,7 +146,7 @@ function TeamTech() {
     },
     {
       title: "Otimizacao de custos",
-      text: "Engenharia inteligente que maximiza resultados sem comprometer a qualidade.",
+      text: "Engenharia inteligente que protege a intencao arquitetonica sem comprometer qualidade ou custos.",
     },
     {
       title: "Softwares de gestao avancados",
@@ -172,7 +172,7 @@ function TeamTech() {
             <div className="absolute bottom-0 left-0 right-0 p-7 text-white sm:p-9">
               <p className="font-serif text-4xl font-semibold text-sand-300">+</p>
               <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/78">
-                Engenharia e Arquitetura de Vanguarda
+                Arquitetura e Engenharia de Vanguarda
               </p>
             </div>
           </Reveal>
@@ -182,11 +182,11 @@ function TeamTech() {
               eyebrow="Equipa & Tecnologia"
               title={
                 <>
-                  Engenharia e Arquitetura de{" "}
+                  Arquitetura e Engenharia de{" "}
                   <span className="text-sand-500">Vanguarda</span>
                 </>
               }
-              intro="A Loco Tracos orgulha-se de possuir uma equipa experiente de engenheiros, arquitetos e tecnicos focados na detecao de inconformidades e otimizacao de custos."
+              intro="A Loco Tracos orgulha-se de possuir uma equipa experiente de arquitetos, engenheiros e tecnicos focados em transformar conceito, detalhe e execucao num resultado coerente."
             />
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {features.map((f, i) => (
@@ -219,12 +219,12 @@ export function About() {
         eyebrow="A Empresa"
         title={
           <>
-            Construimos confianca,<br className="hidden sm:block" /> projetos e
+            Desenhamos espacos,<br className="hidden sm:block" /> projetos e
             relacoes
           </>
         }
-        subtitle="Jovem, ousada e inovadora, uma empresa angolana dedicada a excelencia em engenharia, arquitetura e consultoria."
-        image={IMAGES.teamPlans}
+        subtitle="Jovem, ousada e inovadora, uma empresa angolana dedicada a excelencia em arquitetura, engenharia e consultoria tecnica."
+        image={IMAGES.facadeUrban}
       />
       <History />
       <Pillars />

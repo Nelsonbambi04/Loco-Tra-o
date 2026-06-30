@@ -39,7 +39,7 @@ export function Navbar() {
             </span>
           </div>
           <span className="font-display text-[0.66rem] font-black uppercase tracking-[0.18em] text-sand-700">
-            Engenharia, arquitetura e construção
+            Arquitetura, engenharia e construção
           </span>
         </div>
       </div>
