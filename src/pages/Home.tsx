@@ -28,45 +28,54 @@ function Hero() {
   const { navigate } = useNav();
 
   return (
-    <section className="relative overflow-hidden bg-white pt-28 sm:pt-32 lg:pt-36">
-      <div className="absolute right-0 top-0 hidden h-full w-[18%] bg-petroleum-950 lg:block" />
-      <div className="absolute right-[13%] top-0 hidden h-48 w-36 bg-sand-500 lg:block" />
+    <section className="relative overflow-hidden bg-petroleum-950 pt-28 text-white sm:pt-32 lg:pt-36">
+      <div className="absolute inset-0">
+        <img
+          src={IMAGES.constructionSunset}
+          alt=""
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-petroleum-950 via-petroleum-950/82 to-petroleum-950/42" />
+        <div className="absolute inset-0 bg-petroleum-950/18" />
+      </div>
+      <div className="absolute right-0 top-0 hidden h-full w-[18%] bg-petroleum-950/72 lg:block" />
+      <div className="absolute right-[13%] top-0 hidden h-48 w-36 bg-sand-500/95 lg:block" />
 
       <Container className="relative">
         <div className="flex min-h-[680px] items-center">
           <Reveal>
             <div className="max-w-4xl py-10 lg:py-20">
               <Eyebrow>Loco Traços, LDA</Eyebrow>
-              <h1 className="mt-6 max-w-5xl font-display text-[2.35rem] font-black uppercase leading-[1.02] tracking-tight text-petroleum-950 sm:text-5xl lg:text-[5.2rem]">
+              <h1 className="mt-6 max-w-5xl font-display text-[2.35rem] font-black uppercase leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-[5.2rem]">
                 Construção com rigor, projeto e fiscalização num só lugar.
               </h1>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-charcoal/68 sm:text-lg">
+              <p className="mt-6 max-w-2xl text-base leading-8 text-white/78 sm:text-lg">
                 Do desenho técnico à entrega da chave, concebemos, fiscalizamos
                 e executamos obras com transparência, controlo de qualidade e
                 padrão profissional.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button variant="dark" size="lg" onClick={() => navigate("contact")}>
+                <Button variant="primary" size="lg" onClick={() => navigate("contact")}>
                   Pedir orçamento
                   <ArrowUpRight className="h-4 w-4" />
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => navigate("services")}>
+                <Button variant="outlineLight" size="lg" onClick={() => navigate("services")}>
                   Ver serviços
                   <ArrowUpRight className="h-4 w-4" />
                 </Button>
               </div>
 
-              <div className="mt-10 grid max-w-lg grid-cols-3 border-y border-petroleum-900/10">
+              <div className="mt-10 grid max-w-lg grid-cols-3 border-y border-white/18">
                 {STATS.slice(1, 4).map((stat) => (
                   <div
                     key={stat.label}
-                    className="border-r border-petroleum-900/10 py-5 pr-4 last:border-r-0"
+                    className="border-r border-white/18 py-5 pr-4 last:border-r-0"
                   >
-                    <p className="font-display text-2xl font-black text-petroleum-950">
+                    <p className="font-display text-2xl font-black text-white">
                       <CountUp to={stat.value} suffix={stat.suffix} />
                     </p>
-                    <p className="mt-1 text-[0.66rem] font-black uppercase tracking-[0.14em] text-charcoal/45">
+                    <p className="mt-1 text-[0.66rem] font-black uppercase tracking-[0.14em] text-white/55">
                       {stat.label}
                     </p>
                   </div>
