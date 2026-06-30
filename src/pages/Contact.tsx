@@ -42,10 +42,13 @@ function ContactForm() {
     {},
   );
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const update = (key: keyof FormState, value: string) => {
     setForm((f) => ({ ...f, [key]: value }));
     setErrors((e) => ({ ...e, [key]: undefined }));
+    setSubmitError("");
   };
 
   const validate = () => {
@@ -60,11 +63,40 @@ function ContactForm() {
     return Object.keys(e).length === 0;
   };
 
-  const onSubmit = (ev: FormEvent) => {
+  const onSubmit = async (ev: FormEvent) => {
     ev.preventDefault();
-    if (validate()) {
+    if (!validate()) return;
+
+    setSending(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/send-budget", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = (await response.json().catch(() => ({}))) as {
+        error?: string;
+      };
+
+      if (!response.ok) {
+        throw new Error(data.error || "Nao foi possivel enviar o pedido.");
+      }
+
       setSent(true);
       setForm(EMPTY);
+    } catch (error) {
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Nao foi possivel enviar o pedido.",
+      );
+    } finally {
+      setSending(false);
     }
   };
 
@@ -194,8 +226,13 @@ function ContactForm() {
           </div>
 
           <div>
-            <Button type="submit" size="lg" variant="dark">
-              Enviar Pedido
+            {submitError && (
+              <p className="mb-3 text-sm font-semibold text-red-600">
+                {submitError}
+              </p>
+            )}
+            <Button type="submit" size="lg" variant="dark" disabled={sending}>
+              {sending ? "A enviar..." : "Enviar Pedido"}
               <Send className="h-4 w-4" />
             </Button>
           </div>
