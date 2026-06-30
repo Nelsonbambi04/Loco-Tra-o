@@ -37,7 +37,7 @@ export function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className={cn("py-12 sm:py-24 lg:py-28", className)}>
+    <section id={id} className={cn("py-12 sm:py-20 lg:py-24", className)}>
       {children}
     </section>
   );
@@ -120,7 +120,7 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "flex flex-col gap-5",
+        "flex flex-col gap-4",
         align === "center" && "items-center text-center",
         className,
       )}
@@ -146,7 +146,7 @@ export function SectionHeading({
         <Reveal delay={160}>
           <p
             className={cn(
-              "max-w-2xl text-[0.9rem] leading-relaxed sm:text-lg",
+              "max-w-2xl text-[0.9rem] leading-7 sm:text-base",
               tone === "light" ? "text-petroleum-100/80" : "text-charcoal/70",
               align === "center" && "mx-auto",
             )}

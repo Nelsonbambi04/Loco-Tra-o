@@ -89,7 +89,7 @@ export const DIFFERENTIALS = [
 export const STATS = [
   { value: 2020, label: "Fundada", suffix: "" },
   { value: 30, label: "Projetos entregues", suffix: "+" },
-  { value: 5, label: "Áreas de atuação", suffix: "" },
+  { value: 6, label: "Áreas de atuação", suffix: "" },
   { value: 100, label: "Foco em qualidade", suffix: "%" },
 ];
 

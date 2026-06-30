@@ -1,91 +1,115 @@
-import { Check, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { useNav } from "@/lib/navigation";
 import { SERVICES, IMAGES } from "@/lib/data";
 import {
+  Button,
   Container,
+  Reveal,
   Section,
   SectionHeading,
-  Reveal,
-  Button,
-  ArrowRight,
 } from "@/components/ui";
-import { PageHero, CTABand } from "@/components/sections";
+import { CTABand, PageHero } from "@/components/sections";
 import { Icon } from "@/components/Icon";
 
-function ServiceRow() {
+function Intro() {
   const { navigate } = useNav();
-  return (
-    <Section className="bg-white">
-      <Container>
-        <div className="flex flex-col gap-12 sm:gap-16">
-          {SERVICES.map((s, i) => {
-            const reverse = i % 2 === 1;
-            return (
-              <Reveal key={s.slug}>
-                <article className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
-                  {/* Image */}
-                  <div
-                    className={
-                      reverse
-                        ? "lg:order-2"
-                        : "lg:order-1"
-                    }
-                  >
-                    <div className="group relative overflow-hidden rounded-2xl">
-                      <img
-                        src={s.image}
-                        alt={s.title}
-                        className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-petroleum-950/30 to-transparent" />
-                      <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-xl bg-white/90 text-petroleum-900 shadow-lg backdrop-blur">
-                        <Icon name={s.icon} className="h-6 w-6" />
-                      </div>
-                      <span className="absolute right-5 top-5 font-serif text-4xl font-semibold text-white/80 sm:text-5xl">
-                        {s.index}
-                      </span>
-                    </div>
-                  </div>
 
-                  {/* Content */}
-                  <div className={reverse ? "lg:order-1" : "lg:order-2"}>
-                    <span className="font-display text-xs font-bold uppercase tracking-[0.25em] text-sand-600">
-                      Serviço {s.index}
-                    </span>
-                    <h3 className="mt-3 font-serif text-xl font-semibold leading-tight text-petroleum-900 sm:text-3xl">
-                      {s.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-charcoal/70 sm:mt-4 sm:text-base">
-                      {s.description}
+  return (
+    <Section className="bg-[#dedede]">
+      <Container>
+        <div className="grid gap-7 lg:grid-cols-[1fr_0.42fr] lg:items-end">
+          <SectionHeading
+            eyebrow="Serviços"
+            title={
+              <>
+                Nossas soluções em{" "}
+                <span className="text-sand-500">construção e design</span>
+              </>
+            }
+            intro="Oferecemos serviços de alta qualidade, cumprindo rigorosamente os prazos e orçamentos estabelecidos, do conceito à entrega."
+          />
+          <Reveal delay={120}>
+            <div className="bg-white p-6 shadow-[0_14px_38px_rgba(17,22,26,0.14)]">
+              <div className="flex h-12 w-12 items-center justify-center bg-gradient-to-br from-sand-500 to-[#16c4d5] text-white">
+                <ArrowUpRight className="h-5 w-5" />
+              </div>
+              <p className="mt-5 text-sm font-black uppercase tracking-[0.14em] text-petroleum-950">
+                {SERVICES.length} áreas de especialização
+              </p>
+              <button
+                onClick={() => navigate("contact")}
+                className="mt-2 text-xs font-black uppercase tracking-[0.16em] text-sand-600"
+              >
+                Peça um orçamento
+              </button>
+            </div>
+          </Reveal>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+
+function ServiceGrid() {
+  const { navigate } = useNav();
+
+  return (
+    <Section className="bg-[#dedede] pt-0">
+      <Container>
+        <div className="grid gap-6 lg:grid-cols-2">
+          {SERVICES.map((service, index) => (
+            <Reveal key={service.slug} delay={(index % 2) * 100}>
+              <article className="grid h-full overflow-hidden bg-white shadow-[0_14px_38px_rgba(17,22,26,0.14)] sm:grid-cols-[0.82fr_1.18fr]">
+                <div className="relative min-h-[250px] overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-petroleum-950/20" />
+                  <span className="absolute left-5 top-5 font-display text-5xl font-black text-white/82">
+                    {service.index}
+                  </span>
+                </div>
+
+                <div className="p-6 sm:p-8">
+                  <div className="flex items-center justify-between gap-4">
+                    <p className="text-xs font-black uppercase tracking-[0.18em] text-sand-600">
+                      Serviço {service.index}
                     </p>
-                    <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                      {s.bullets.map((b) => (
-                        <li
-                          key={b}
-                          className="flex items-center gap-2.5 text-sm font-medium text-petroleum-900"
-                        >
-                          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sand-100 text-sand-600">
-                            <Check className="h-3 w-3" strokeWidth={3} />
-                          </span>
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="mt-8">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => navigate("contact")}
-                      >
-                        Solicitar este serviço
-                        <ArrowRight />
-                      </Button>
+                    <div className="flex h-11 w-11 items-center justify-center bg-sand-50 text-sand-600">
+                      <Icon name={service.icon} className="h-5 w-5" strokeWidth={2} />
                     </div>
                   </div>
-                </article>
-              </Reveal>
-            );
-          })}
+                  <h3 className="mt-5 font-display text-lg font-black uppercase leading-tight text-petroleum-950">
+                    {service.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-charcoal/65">
+                    {service.description}
+                  </p>
+                  <ul className="mt-5 grid gap-2">
+                    {service.bullets.map((item) => (
+                      <li key={item} className="flex gap-2.5 text-sm text-petroleum-900">
+                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sand-100 text-sand-600">
+                          <Check className="h-3 w-3" strokeWidth={3} />
+                        </span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="mt-7"
+                    onClick={() => navigate("contact")}
+                  >
+                    Solicitar este serviço
+                    <ArrowUpRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              </article>
+            </Reveal>
+          ))}
         </div>
       </Container>
     </Section>
@@ -115,8 +139,9 @@ function Process() {
       text: "Reabilitação, acabamentos premium e entrega da obra pronta a ser vivida.",
     },
   ];
+
   return (
-    <Section className="relative overflow-hidden bg-petroleum-950 text-white">
+    <Section className="bg-petroleum-950 text-white">
       <Container>
         <SectionHeading
           align="center"
@@ -126,62 +151,21 @@ function Process() {
           intro="Um método estruturado que garante transparência, qualidade e cumprimento de prazos em cada etapa."
           className="mx-auto items-center"
         />
-        <div className="mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((s, i) => (
-            <Reveal key={s.n} delay={i * 110}>
-              <div className="group relative h-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-sand-300/40 sm:p-7">
-                <span className="font-serif text-3xl font-semibold text-sand-300 sm:text-4xl">
-                  {s.n}
-                </span>
-                <h3 className="mt-4 font-display text-base font-bold tracking-tight text-white">
-                  {s.title}
-                </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-petroleum-100/70">
-                  {s.text}
+
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map((step, index) => (
+            <Reveal key={step.n} delay={index * 100}>
+              <article className="h-full border border-white/10 bg-white/[0.04] p-6">
+                <p className="font-display text-4xl font-black text-sand-300">
+                  {step.n}
                 </p>
-              </div>
+                <h3 className="mt-5 font-display text-base font-black uppercase text-white">
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-white/65">{step.text}</p>
+              </article>
             </Reveal>
           ))}
-        </div>
-      </Container>
-    </Section>
-  );
-}
-
-function Intro() {
-  const { navigate } = useNav();
-  return (
-    <Section className="bg-sand-50">
-      <Container>
-        <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
-          <SectionHeading
-            eyebrow="Serviços"
-            title={
-              <>
-                Nossas soluções em{" "}
-                <span className="text-sand-500">construção e design</span>
-              </>
-            }
-            intro="Oferecemos serviços de alta qualidade, cumprindo rigorosamente os prazos e orçamentos estabelecidos — do conceito à entrega."
-          />
-          <Reveal delay={140}>
-            <div className="flex items-center gap-3 rounded-2xl border border-petroleum-900/10 bg-white p-5">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-petroleum-900 text-sand-300">
-                <ArrowUpRight className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-petroleum-900">
-                  {SERVICES.length} áreas de especialização
-                </p>
-                <button
-                  onClick={() => navigate("contact")}
-                  className="link-underline text-xs font-semibold uppercase tracking-[0.14em] text-sand-600"
-                >
-                  Peça um orçamento
-                </button>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </Container>
     </Section>
@@ -198,11 +182,11 @@ export function Services() {
             Excelência em cada<br className="hidden sm:block" /> etapa da obra
           </>
         }
-        subtitle="Construção civil, arquitetura, fiscalização, topografia e consultoria — tudo o que o seu projeto precisa, num só lugar."
+        subtitle="Construção civil, arquitetura, fiscalização, topografia, consultoria e plotter, tudo o que o seu projeto precisa, num só lugar."
         image={IMAGES.constructionDiscuss}
       />
       <Intro />
-      <ServiceRow />
+      <ServiceGrid />
       <Process />
       <CTABand image={IMAGES.constructionSunset} />
     </>

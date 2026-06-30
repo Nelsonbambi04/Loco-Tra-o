@@ -1,22 +1,22 @@
 import { useState, type FormEvent } from "react";
 import {
-  Phone,
-  Mail,
-  FileText,
-  Navigation,
   CheckCircle2,
-  Send,
   Clock,
+  FileText,
+  Mail,
+  Navigation,
+  Phone,
+  Send,
 } from "lucide-react";
-import { COMPANY, SERVICE_OPTIONS, IMAGES } from "@/lib/data";
+import { COMPANY, IMAGES, SERVICE_OPTIONS } from "@/lib/data";
 import {
+  ArrowRight,
+  Button,
   Container,
+  Eyebrow,
+  Reveal,
   Section,
   SectionHeading,
-  Reveal,
-  Button,
-  ArrowRight,
-  Eyebrow,
 } from "@/components/ui";
 import { PageHero } from "@/components/sections";
 
@@ -54,7 +54,7 @@ function ContactForm() {
     if (!form.telefone.trim()) e.telefone = "Indique o seu telefone.";
     if (!form.email.trim()) e.email = "Indique o seu e-mail.";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      e.email = "E-mail inválido.";
+      e.email = "E-mail invalido.";
     if (!form.mensagem.trim()) e.mensagem = "Escreva a sua mensagem.";
     setErrors(e);
     return Object.keys(e).length === 0;
@@ -69,23 +69,24 @@ function ContactForm() {
   };
 
   const fieldClass = (key: keyof FormState) =>
-    `w-full rounded-xl border bg-white px-4 py-3 text-sm text-charcoal outline-none transition-colors placeholder:text-charcoal/35 focus:border-petroleum-500 focus:ring-2 focus:ring-petroleum-500/15 ${
-      errors[key] ? "border-red-400" : "border-petroleum-900/12"
+    `w-full border bg-white px-4 py-3 text-sm text-charcoal outline-none transition-colors placeholder:text-charcoal/35 focus:border-sand-500 focus:ring-2 focus:ring-sand-500/15 ${
+      errors[key] ? "border-red-400" : "border-zinc-220"
     }`;
 
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-white p-5 shadow-xl shadow-petroleum-900/5 ring-1 ring-petroleum-900/5 sm:p-9">
+    <div className="relative overflow-hidden bg-white p-5 shadow-[0_22px_55px_rgba(15,23,42,0.12)] ring-1 ring-black/5 sm:p-9">
+      <div className="absolute left-0 top-0 h-1.5 w-36 bg-gradient-to-r from-sand-500 to-cyan-400" />
       {sent ? (
         <div className="flex flex-col items-center justify-center gap-4 py-16 text-center">
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-sand-100 text-sand-600">
             <CheckCircle2 className="h-9 w-9" strokeWidth={1.6} />
           </div>
-          <h3 className="font-serif text-xl font-semibold text-petroleum-900 sm:text-2xl">
+          <h3 className="font-serif text-xl font-semibold text-petroleum-950 sm:text-2xl">
             Mensagem enviada!
           </h3>
           <p className="max-w-md text-sm text-charcoal/65">
-            Obrigado pelo seu contacto. A nossa equipa irá responder em breve
-            com toda a informação de que necessita.
+            Obrigado pelo seu contacto. A nossa equipa ira responder em breve
+            com toda a informacao de que necessita.
           </p>
           <Button
             variant="outline"
@@ -99,19 +100,19 @@ function ContactForm() {
       ) : (
         <form onSubmit={onSubmit} noValidate className="flex flex-col gap-5">
           <div>
-            <Eyebrow>Formulário de Orçamento</Eyebrow>
-            <h3 className="mt-3 font-serif text-xl font-semibold text-petroleum-900 sm:text-3xl">
+            <Eyebrow>Formulario de Orcamento</Eyebrow>
+            <h3 className="mt-3 font-serif text-2xl font-semibold text-petroleum-950 sm:text-3xl">
               Fale Connosco
             </h3>
             <p className="mt-2 text-sm text-charcoal/60">
-              Preencha os dados abaixo. Respondemos com um orçamento à medida do
+              Preencha os dados abaixo. Respondemos com um orcamento a medida do
               seu projeto.
             </p>
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
-              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-petroleum-800">
+              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-petroleum-900">
                 Nome *
               </label>
               <input
@@ -126,7 +127,7 @@ function ContactForm() {
               )}
             </div>
             <div>
-              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-petroleum-800">
+              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-petroleum-900">
                 Telefone *
               </label>
               <input
@@ -144,7 +145,7 @@ function ContactForm() {
 
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
-              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-petroleum-800">
+              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-petroleum-900">
                 E-mail *
               </label>
               <input
@@ -159,8 +160,8 @@ function ContactForm() {
               )}
             </div>
             <div>
-              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-petroleum-800">
-                Tipo de Serviço
+              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-petroleum-900">
+                Tipo de Servico
               </label>
               <select
                 value={form.servico}
@@ -177,14 +178,14 @@ function ContactForm() {
           </div>
 
           <div>
-            <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-petroleum-800">
+            <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-petroleum-900">
               Mensagem *
             </label>
             <textarea
               value={form.mensagem}
               onChange={(e) => update("mensagem", e.target.value)}
               rows={5}
-              placeholder="Descreva o seu projeto, localização e necessidades..."
+              placeholder="Descreva o seu projeto, localizacao e necessidades..."
               className={`${fieldClass("mensagem")} resize-none`}
             />
             {errors.mensagem && (
@@ -227,21 +228,21 @@ function ContactInfo() {
     {
       icon: Clock,
       label: "Atendimento",
-      lines: ["Segunda a Sexta · 08h–17h", "Sábado · 08h–13h"],
+      lines: ["Segunda a Sexta - 08h-17h", "Sabado - 08h-13h"],
       hrefs: [],
     },
   ];
 
   return (
-    <div className="flex flex-col gap-4">
-      {items.map((item) => (
-        <Reveal key={item.label}>
-          <div className="flex items-start gap-3 rounded-2xl border border-petroleum-900/10 bg-white p-4 shadow-sm shadow-petroleum-900/5 sm:gap-4 sm:p-5">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sand-300 text-petroleum-900 sm:h-11 sm:w-11">
+    <div className="grid gap-4">
+      {items.map((item, index) => (
+        <Reveal key={item.label} delay={index * 80}>
+          <div className="flex items-start gap-4 bg-white p-5 shadow-[0_14px_32px_rgba(15,23,42,0.08)] ring-1 ring-black/5">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center bg-gradient-to-br from-sand-500 to-cyan-400 text-white">
               <item.icon className="h-5 w-5" strokeWidth={1.8} />
             </div>
             <div>
-              <p className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-sand-300">
+              <p className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-charcoal/45">
                 {item.label}
               </p>
               <div className="mt-1 flex flex-col gap-0.5">
@@ -250,14 +251,14 @@ function ContactInfo() {
                     <a
                       key={i}
                       href={item.hrefs[i]}
-                      className="text-sm font-semibold text-petroleum-900 transition-colors hover:text-sand-600"
+                      className="text-sm font-semibold text-petroleum-950 transition-colors hover:text-sand-600"
                     >
                       {line}
                     </a>
                   ) : (
                     <span
                       key={i}
-                      className="text-sm font-semibold text-petroleum-900"
+                      className="text-sm font-semibold text-petroleum-950"
                     >
                       {line}
                     </span>
@@ -283,28 +284,28 @@ export function Contact() {
   return (
     <>
       <PageHero
-        eyebrow="Contactos & Localização"
+        eyebrow="Contactos & Localizacao"
         title={
           <>
             Vamos dar o primeiro<br className="hidden sm:block" /> passo juntos
           </>
         }
-        subtitle="Solicite um orçamento sem compromisso ou visite-nos no nosso escritório em Luanda."
+        subtitle="Solicite um orcamento sem compromisso ou visite-nos no nosso escritorio em Luanda."
         image={IMAGES.facadeGlass}
         align="left"
       />
 
-      <Section className="bg-white">
+      <Section className="bg-zinc-100">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+          <div className="grid gap-9 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
             <Reveal>
               <ContactForm />
             </Reveal>
 
-            <div className="flex flex-col">
+            <div>
               <SectionHeading
                 eyebrow="Dados Oficiais"
-                title="Estamos à sua disposição"
+                title="Estamos a sua disposicao"
                 className="mb-6"
               />
               <ContactInfo />
@@ -313,14 +314,13 @@ export function Contact() {
         </Container>
       </Section>
 
-      {/* Location */}
-      <Section className="bg-petroleum-950 py-20 text-white sm:py-24">
+      <Section className="bg-white py-20 sm:py-24">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
-            <div>
+          <div className="grid overflow-hidden bg-petroleum-950 text-white shadow-[0_22px_55px_rgba(15,23,42,0.18)] lg:grid-cols-[0.85fr_1.15fr]">
+            <div className="p-6 sm:p-10 lg:p-12">
               <SectionHeading
                 tone="light"
-                eyebrow="Localização do Escritório"
+                eyebrow="Localizacao do Escritorio"
                 title={
                   <>
                     Encontre-nos em{" "}
@@ -330,8 +330,8 @@ export function Contact() {
                 intro={COMPANY.address}
               />
               <Reveal delay={140}>
-                <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <p className="flex items-start gap-3 text-sm leading-relaxed text-petroleum-100/80">
+                <div className="mt-7 border border-white/10 bg-white/[0.04] p-6">
+                  <p className="flex items-start gap-3 text-sm leading-relaxed text-white/78">
                     <Navigation
                       className="mt-0.5 h-5 w-5 shrink-0 text-sand-300"
                       strokeWidth={1.6}
@@ -350,17 +350,15 @@ export function Contact() {
               </Reveal>
             </div>
 
-            <Reveal delay={120}>
-              <div className="overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
-                <iframe
-                  title="Localização Loco Traços — Maculusso, Luanda"
-                  src={mapsEmbed}
-                  className="h-[360px] w-full lg:h-[440px]"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  style={{ border: 0, filter: "saturate(0.9)" }}
-                />
-              </div>
+            <Reveal delay={120} className="min-h-[360px]">
+              <iframe
+                title="Localizacao Loco Tracos - Maculusso, Luanda"
+                src={mapsEmbed}
+                className="h-[360px] w-full lg:h-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                style={{ border: 0, filter: "saturate(0.9)" }}
+              />
             </Reveal>
           </div>
         </Container>
