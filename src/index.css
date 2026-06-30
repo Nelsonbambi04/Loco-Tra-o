@@ -19,17 +19,17 @@
   --color-petroleum-900: #20262b;
   --color-petroleum-950: #11161a;
 
-  /* Professional warm accent */
-  --color-sand-50: #f8f7f2;
-  --color-sand-100: #efede2;
-  --color-sand-200: #ded8c4;
-  --color-sand-300: #c5b98e;
-  --color-sand-400: #aa9b68;
-  --color-sand-500: #8f8358;
-  --color-sand-600: #736842;
-  --color-sand-700: #595034;
-  --color-sand-800: #403a27;
-  --color-sand-900: #2c281c;
+  /* Logo purple accent */
+  --color-sand-50: #f8f5ff;
+  --color-sand-100: #efe6ff;
+  --color-sand-200: #ddc8ff;
+  --color-sand-300: #bf94ff;
+  --color-sand-400: #9f62ff;
+  --color-sand-500: #7b35e8;
+  --color-sand-600: #6322c6;
+  --color-sand-700: #501b9e;
+  --color-sand-800: #3f197a;
+  --color-sand-900: #2d105d;
 
   /* Charcoal */
   --color-charcoal: #14171d;
@@ -47,7 +47,7 @@
   }
 
   body {
-    background-color: #f4f6f8;
+    background-color: #e9e9ea;
     color: var(--color-charcoal);
     font-family: var(--font-sans);
     overflow-x: hidden;

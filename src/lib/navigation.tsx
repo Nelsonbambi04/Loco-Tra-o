@@ -18,13 +18,7 @@ export const PAGES: PageId[] = [
   "contact",
 ];
 
-const TITLES: Record<PageId, string> = {
-  home: "Loco Traços - Arquitetura, Design & Engenharia | Angola",
-  about: "A Empresa - Loco Traços | Angola",
-  services: "Serviços - Loco Traços | Angola",
-  portfolio: "Portfólio - Loco Traços | Angola",
-  contact: "Contactos - Loco Traços | Angola",
-};
+const SITE_TITLE = "Loco Traços";
 
 function hashToPage(): PageId {
   if (typeof window === "undefined") return "home";
@@ -56,7 +50,7 @@ export function NavProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    document.title = TITLES[page];
+    document.title = SITE_TITLE;
   }, [page]);
 
   const navigate = useCallback((next: PageId) => {
