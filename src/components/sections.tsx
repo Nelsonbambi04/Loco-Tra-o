@@ -17,13 +17,13 @@ export function PageHero({
   align?: "center" | "left";
 }) {
   return (
-    <section className="relative overflow-hidden bg-[#dedede] pt-28 sm:pt-32 lg:pt-36">
-      <Container className="relative pb-10 sm:pb-14">
-        <div className="relative overflow-hidden bg-white shadow-[0_18px_48px_rgba(17,22,26,0.18)]">
+    <section className="relative flex min-h-svh overflow-hidden bg-[#dedede] pt-20 sm:pt-24 lg:pt-28">
+      <Container className="relative flex w-full max-w-none px-0 pb-0 sm:px-5 sm:pb-5 lg:px-10 lg:pb-8">
+        <div className="relative flex min-h-[calc(100svh-5rem)] w-full overflow-hidden bg-white shadow-[0_18px_48px_rgba(17,22,26,0.18)] sm:min-h-[calc(100svh-7.25rem)] lg:min-h-[calc(100svh-8.5rem)]">
           <div className="absolute -top-24 left-1/2 h-44 w-72 -translate-x-1/2 rounded-b-[4rem] bg-gradient-to-br from-sand-500 to-[#15c6d4]" />
           <div className="absolute right-7 top-7 hidden h-2.5 w-9 rounded-full bg-sand-600 sm:block" />
 
-          <div className="grid min-h-[390px] items-center gap-8 p-6 sm:p-9 lg:grid-cols-[0.92fr_1.08fr] lg:p-12">
+          <div className="grid w-full items-center gap-7 p-5 sm:gap-8 sm:p-9 lg:grid-cols-[0.92fr_1.08fr] lg:p-12 xl:p-16">
             <div
               className={cn(
                 "relative z-10 max-w-2xl",
@@ -32,7 +32,7 @@ export function PageHero({
             >
               <div className="mb-7 h-1 w-14 bg-petroleum-950" />
               <Eyebrow>{eyebrow}</Eyebrow>
-              <h1 className="mt-5 font-display text-[2rem] font-black uppercase leading-[1.02] tracking-tight text-petroleum-950 sm:text-5xl lg:text-6xl">
+              <h1 className="mt-5 font-display text-[2.15rem] font-black uppercase leading-[1.02] tracking-tight text-petroleum-950 sm:text-5xl lg:text-6xl xl:text-[4.35rem]">
                 {title}
               </h1>
               {subtitle && (
@@ -42,21 +42,13 @@ export function PageHero({
               )}
             </div>
 
-            <div className="relative z-10 min-h-[280px]">
+            <div className="relative z-10 min-h-[34svh] sm:min-h-[360px] lg:min-h-[520px]">
               <div className="absolute inset-y-6 right-0 w-[78%] bg-gradient-to-b from-sand-500 to-[#16c4d5]" />
               <img
                 src={image}
                 alt=""
-                className="relative ml-auto h-[320px] w-[88%] object-cover shadow-[0_16px_36px_rgba(17,22,26,0.2)] sm:h-[380px]"
+                className="relative ml-auto h-[34svh] min-h-[260px] w-[92%] object-cover shadow-[0_16px_36px_rgba(17,22,26,0.2)] sm:h-[420px] lg:h-[520px] xl:h-[580px]"
               />
-              <div className="absolute bottom-6 left-0 max-w-[15rem] bg-white p-4 shadow-xl">
-                <p className="text-[0.66rem] font-black uppercase tracking-[0.18em] text-sand-600">
-                  Loco Traços
-                </p>
-                <p className="mt-1 text-sm font-black leading-tight text-petroleum-950">
-                  Engenharia, arquitetura e construção.
-                </p>
-              </div>
             </div>
           </div>
         </div>

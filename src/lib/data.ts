@@ -42,6 +42,7 @@ export const IMAGES = {
   villaStone: pdfAsset("pdf-image-056-obj-253.jpg"),
   villaIlluminated: pdfAsset("pdf-image-057-obj-256.jpg"),
   facadeGlass: pdfAsset("pdf-image-009-obj-76.jpg"),
+  facadeClinic: pdfAsset("pdf-image-010-obj-87.jpg"),
   facadeUrban: pdfAsset("pdf-image-016-obj-115.jpg"),
   facadeClouds: pdfAsset("pdf-image-042-obj-219.jpg"),
   facadeMinimal: pdfAsset("pdf-image-027-obj-174.jpg"),
@@ -58,6 +59,7 @@ export const IMAGES = {
   teamHardHats: pdfAsset("pdf-image-063-obj-284.jpg"),
   teamHelmets: pdfAsset("pdf-image-008-obj-75.jpg"),
   teamWomen: pdfAsset("pdf-image-016-obj-115.jpg"),
+  consultingSite: pdfAsset("pdf-image-011-obj-88.jpg"),
   interiorChandelier: pdfAsset("pdf-image-050-obj-239.jpg"),
   interiorBlue: pdfAsset("pdf-image-051-obj-240.jpg"),
   interiorMinimal: pdfAsset("pdf-image-027-obj-174.jpg"),
@@ -138,7 +140,7 @@ export const SERVICES: Service[] = [
       "Comércio, clínicas e residências",
       "Apresentações 2D e 3D",
     ],
-    image: IMAGES.interiorMinimal,
+    image: IMAGES.interiorBlue,
     icon: "compass",
   },
   {
@@ -186,7 +188,7 @@ export const SERVICES: Service[] = [
       "Impressão e encadernação técnica",
       "Formação: Orçamentos, Medições, AutoCAD 2D/3D",
     ],
-    image: IMAGES.teamHelmets,
+    image: IMAGES.consultingSite,
     icon: "graduation-cap",
   },
   {
@@ -202,7 +204,7 @@ export const SERVICES: Service[] = [
       "Cortes e acabamento de folhas",
       "Dobragem técnica para arquivo e entrega",
     ],
-    image: IMAGES.teamPlans,
+    image: IMAGES.facadeClinic,
     icon: "printer",
   },
 ];
