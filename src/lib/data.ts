@@ -11,7 +11,7 @@ export const COMPANY = {
   founded: 2020,
   nif: "5000510661",
   phones: ["+244 925 783 201", "+244 925 732 355"],
-  email: "geral@locotraco.ao",
+  email: "geral@locotracos.ao",
   address:
     "Rua Luther King, Bairro do Maculusso, Distrito Urbano da Maianga, Luanda, Angola",
   reference:
@@ -189,6 +189,22 @@ export const SERVICES: Service[] = [
     image: IMAGES.teamHelmets,
     icon: "graduation-cap",
   },
+  {
+    slug: "servicos-plotter",
+    index: "06",
+    title: "Serviços de Plotter",
+    short: "Impressões técnicas de A4 até A0+, cortes e dobragem de folhas.",
+    description:
+      "Serviços de plotter para impressão de desenhos técnicos, plantas, mapas e documentos de engenharia, com formatos desde A4 até A0+, incluindo corte, acabamento e dobragem de folhas.",
+    bullets: [
+      "Impressões de A4 até A0+",
+      "Plantas, desenhos técnicos e mapas",
+      "Cortes e acabamento de folhas",
+      "Dobragem técnica para arquivo e entrega",
+    ],
+    image: IMAGES.teamPlans,
+    icon: "printer",
+  },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -336,5 +352,6 @@ export const SERVICE_OPTIONS = [
   "Projeto de Arquitetura / Design",
   "Fiscalização / Direção de Obra",
   "Topografia",
+  "Serviços de Plotter",
   "Consultoria / Outro",
 ];

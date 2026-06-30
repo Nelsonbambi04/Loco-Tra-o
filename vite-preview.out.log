@@ -1,0 +1,13 @@
+
+> react-vite-tailwind@0.0.0 dev
+> vite --host 127.0.0.1 --port 5173
+
+
+  [32m[1mVITE[22m v7.3.2[39m  [2mready in [0m[1m982[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m13:02:10[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Icon.tsx[22m
+[2m13:02:10[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Icon.tsx[22m
+[2m13:02:27[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Footer.tsx, /src/pages/Portfolio.tsx, /src/components/Navbar.tsx, /src/pages/About.tsx, /src/pages/Services.tsx, /src/pages/Contact.tsx, /src/pages/Home.tsx[22m
+[2m13:03:08[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Footer.tsx, /src/pages/Portfolio.tsx, /src/components/Navbar.tsx, /src/pages/About.tsx, /src/pages/Services.tsx, /src/pages/Contact.tsx, /src/pages/Home.tsx[22m
+[2m13:03:09[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Footer.tsx, /src/pages/Portfolio.tsx, /src/components/Navbar.tsx, /src/pages/About.tsx, /src/pages/Services.tsx, /src/pages/Contact.tsx, /src/pages/Home.tsx[22m

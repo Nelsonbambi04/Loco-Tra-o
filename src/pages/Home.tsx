@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight as ArrowRightIcon, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 import { useNav } from "@/lib/navigation";
 import {
   COMPANY,
@@ -22,76 +22,90 @@ import { CTABand } from "@/components/sections";
 import { Icon } from "@/components/Icon";
 
 function Hero() {
-  const heroImages = [
-    IMAGES.villaDusk,
-    IMAGES.villaPool,
-    IMAGES.facadeGlass,
-    IMAGES.apartments,
-    IMAGES.villaIlluminated,
-  ];
   const { navigate } = useNav();
 
   return (
-    <section className="mobile-hero relative flex min-h-[640px] items-center justify-center overflow-hidden bg-petroleum-950 pt-28 text-center text-white sm:min-h-[720px] sm:pt-36">
-      <div className="absolute inset-0">
-        {heroImages.map((image, index) => (
-          <img
-            key={image}
-            src={image}
-            alt="Projeto arquitetÃ³nico moderno da Loco TraÃ§os"
-            className="hero-slide absolute inset-0 h-full w-full object-cover object-center"
-            style={{ animationDelay: `${index * 5}s` }}
-          />
+    <section className="relative overflow-hidden bg-[#f4f6f8] pt-28 sm:pt-36 lg:pt-40">
+      <div className="absolute right-6 top-28 hidden grid-cols-6 gap-4 opacity-35 lg:grid">
+        {Array.from({ length: 36 }).map((_, i) => (
+          <span key={i} className="h-1.5 w-1.5 rounded-full bg-sand-600" />
         ))}
       </div>
-      <img
-        src={IMAGES.hero}
-        alt="Projeto arquitetónico moderno da Loco Traços"
-        className="hidden"
-      />
-      <div className="absolute inset-0 bg-petroleum-950/64 sm:bg-petroleum-950/58" />
-      <div className="absolute inset-0 bg-gradient-to-t from-petroleum-950/85 via-petroleum-950/25 to-petroleum-950/20" />
 
-      <button
-        className="hidden"
-        aria-label="Projeto anterior"
-      >
-        <ArrowLeft className="h-5 w-5" />
-      </button>
-      <button
-        className="hidden"
-        aria-label="Próximo projeto"
-      >
-        <ArrowRightIcon className="h-5 w-5" />
-      </button>
+      <Container className="relative">
+        <div className="grid min-h-[660px] items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <Reveal>
+            <div className="max-w-xl pb-8 lg:pb-20">
+              <Eyebrow className="hero-eyebrow">
+                Angola - Construção, fiscalização e projetos
+              </Eyebrow>
+              <h1 className="hero-title mt-6 font-display text-[2.35rem] font-black leading-[1.02] tracking-normal text-petroleum-950 sm:text-5xl lg:text-6xl">
+                Construímos com método, detalhe e padrão profissional.
+              </h1>
+              <p className="hero-copy mt-6 max-w-lg text-base leading-8 text-charcoal/68 sm:text-lg">
+                Projetos, fiscalização e construção numa só equipa. Do desenho
+                técnico à entrega da chave, a Loco Traços coordena cada etapa
+                com rigor, transparência e controlo de qualidade.
+              </p>
 
-      <Container className="relative px-6">
-        <div className="mx-auto max-w-4xl">
-          <Eyebrow tone="light" className="hero-eyebrow justify-center">
-            Angola - Construção & Arquitetura
-          </Eyebrow>
-          <h1 className="hero-title mx-auto mt-6 max-w-[21rem] font-display text-[2.15rem] font-black uppercase leading-[1.05] tracking-[0.035em] text-white sm:mt-8 sm:max-w-4xl sm:text-5xl sm:tracking-[0.06em] lg:text-6xl">
-            Fazemos grandes obras com novas ideias
-          </h1>
-          <p className="hero-copy mx-auto mt-5 max-w-[21rem] text-[0.92rem] font-semibold leading-7 text-white/82 sm:mt-6 sm:max-w-2xl sm:text-base sm:font-bold">
-            A Loco Traços desenvolve, fiscaliza e executa projetos residenciais,
-            comerciais e institucionais com rigor técnico, estética moderna e
-            compromisso real com prazos.
-          </p>
-          <div className="hidden">
-            <Button size="md" className="min-h-13 sm:px-8 sm:py-4" onClick={() => navigate("services")}>
-              Ler mais
-              <ArrowRight />
-            </Button>
-            <Button
-              size="md"
-              className="min-h-13 sm:px-8 sm:py-4"
-              variant="outlineLight"
-              onClick={() => navigate("contact")}
-            >
-              Pedir orçamento
-            </Button>
-          </div>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Button size="lg" variant="dark" onClick={() => navigate("contact")}>
+                  Pedir orçamento
+                  <ArrowRight />
+                </Button>
+                <Button size="lg" variant="outline" onClick={() => navigate("portfolio")}>
+                  Ver portfólio
+                  <ArrowRight />
+                </Button>
+              </div>
+
+              <div className="mt-10 grid max-w-lg grid-cols-3 border-y border-petroleum-900/10">
+                {STATS.slice(1, 4).map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="border-r border-petroleum-900/10 py-5 pr-4 last:border-r-0"
+                  >
+                    <p className="font-display text-2xl font-black text-petroleum-950">
+                      <CountUp to={stat.value} suffix={stat.suffix} />
+                    </p>
+                    <p className="mt-1 text-[0.66rem] font-bold uppercase tracking-[0.14em] text-charcoal/45">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <div className="relative pb-10 lg:pb-20">
+              <div className="ml-auto max-w-[640px] bg-white p-3 shadow-[0_30px_70px_rgba(17,22,26,0.14)]">
+                <img
+                  src={IMAGES.facadeGlass}
+                  alt="Edifício moderno desenvolvido pela Loco Traços"
+                  className="h-[420px] w-full object-cover sm:h-[520px]"
+                />
+              </div>
+
+              <div className="absolute -left-2 bottom-0 hidden w-56 bg-white p-3 shadow-[0_20px_45px_rgba(17,22,26,0.16)] sm:block">
+                <img
+                  src={IMAGES.constructionDiscuss}
+                  alt="Equipa técnica em obra"
+                  className="h-40 w-full object-cover"
+                />
+                <p className="mt-3 font-display text-xs font-black uppercase tracking-[0.14em] text-petroleum-900">
+                  Fiscalização no terreno
+                </p>
+              </div>
+
+              <div className="absolute -right-2 top-10 hidden w-44 bg-petroleum-950 p-5 text-white shadow-[0_18px_45px_rgba(17,22,26,0.2)] lg:block">
+                <p className="font-display text-3xl font-black text-sand-300">2020</p>
+                <p className="mt-2 text-xs font-bold uppercase leading-relaxed tracking-[0.16em] text-white/70">
+                  Fundada em Luanda
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </Container>
     </section>
@@ -102,38 +116,55 @@ function Welcome() {
   return (
     <Section className="bg-white">
       <Container>
-        <SectionHeading
-          align="center"
-          eyebrow="Bem-vindo à Loco Traços"
-          title={
-            <>
-              Engenharia, arquitetura e construção com{" "}
-              <span className="text-sand-500">padrão profissional</span>
-            </>
-          }
-          intro="Transformamos necessidades em espaços funcionais, seguros e visualmente marcantes. Cada projeto começa com estudo técnico, planeamento transparente e atenção aos detalhes que fazem a obra durar."
-        />
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <SectionHeading
+            eyebrow="Bem-vindo à Loco Traços, LDA"
+            title={
+              <>
+                Projetos. Fiscalização. Construção.{" "}
+                <span className="text-sand-500">
+                  Tudo em uma só empresa, com padrão profissional.
+                </span>
+              </>
+            }
+            intro="Do desenho técnico à entrega da chave: concebemos, fiscalizamos e executamos com rigor, transparência e controlo de qualidade para que a sua obra dure."
+          />
+
+          <Reveal delay={120}>
+            <div className="grid grid-cols-3 border border-petroleum-900/10 bg-petroleum-50">
+              {["Projeto", "Fiscalização", "Execução"].map((item, i) => (
+                <div key={item} className="border-r border-petroleum-900/10 p-5 last:border-r-0">
+                  <p className="font-display text-sm font-black text-sand-600">
+                    0{i + 1}
+                  </p>
+                  <p className="mt-2 text-xs font-black uppercase tracking-[0.14em] text-petroleum-900">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
 
         <div className="mt-10 grid gap-5 sm:mt-14 md:grid-cols-3">
           {SERVICES.slice(0, 3).map((service, i) => (
             <Reveal key={service.slug} delay={i * 100}>
-              <article className="group h-full border border-petroleum-900/10 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-petroleum-900/10">
-                <div className="relative h-52 overflow-hidden sm:h-56">
+              <article className="group h-full bg-[#f7f8f9] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-petroleum-900/10">
+                <div className="relative h-56 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-petroleum-950/70 to-transparent" />
-                  <div className="absolute bottom-0 left-5 flex h-12 w-12 translate-y-1/2 items-center justify-center bg-sand-500 text-white sm:left-6 sm:h-14 sm:w-14">
-                    <Icon name={service.icon} className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2} />
-                  </div>
                 </div>
-                  <div className="p-5 pt-8 sm:p-7 sm:pt-10">
-                  <p className="text-xs font-black uppercase tracking-[0.16em] text-sand-600">
-                    {service.index}
-                  </p>
-                  <h3 className="mt-2 font-display text-base font-black uppercase leading-snug text-petroleum-900 sm:text-lg">
+                <div className="border border-t-0 border-petroleum-900/10 bg-white p-6">
+                  <div className="flex items-center justify-between gap-4">
+                    <p className="text-xs font-black uppercase tracking-[0.16em] text-sand-600">
+                      {service.index}
+                    </p>
+                    <Icon name={service.icon} className="h-5 w-5 text-sand-600" strokeWidth={2} />
+                  </div>
+                  <h3 className="mt-4 font-display text-base font-black uppercase leading-snug text-petroleum-900 sm:text-lg">
                     {service.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-charcoal/68">
@@ -157,7 +188,7 @@ function WhyUs() {
           <div>
             <SectionHeading
               tone="light"
-              eyebrow="Porquê escolher-nos"
+              eyebrow="Porque escolher-nos"
               title="Método, equipa e controlo em todas as fases"
               intro="A nossa atuação combina criatividade arquitetónica com disciplina de engenharia. O cliente acompanha decisões, custos e evolução da obra com clareza."
             />
@@ -165,7 +196,7 @@ function WhyUs() {
               {STATS.map((stat) => (
                 <Reveal key={stat.label}>
                   <div className="border border-white/10 p-4 sm:p-5">
-                    <p className="font-display text-xl font-black text-sand-400 sm:text-3xl">
+                    <p className="font-display text-xl font-black text-sand-300 sm:text-3xl">
                       <CountUp to={stat.value} suffix={stat.suffix} />
                     </p>
                     <p className="mt-2 text-[0.68rem] font-bold uppercase tracking-[0.12em] text-white/55 sm:text-xs sm:tracking-[0.16em]">
@@ -203,7 +234,7 @@ function WhyUs() {
 function Projects() {
   const { navigate } = useNav();
   return (
-    <Section className="bg-petroleum-50">
+    <Section className="bg-[#f4f6f8]">
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading
@@ -225,21 +256,22 @@ function Projects() {
         <div className="mt-10 grid gap-5 sm:mt-12 sm:grid-cols-2 lg:grid-cols-4">
           {FEATURED_PROJECTS.map((project, i) => (
             <Reveal key={project.name} delay={i * 80}>
-              <article className="group relative min-h-[320px] overflow-hidden bg-petroleum-900 text-white sm:min-h-[360px]">
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-petroleum-950 via-petroleum-950/25 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                  <span className="bg-sand-500 px-3 py-1 text-[0.64rem] font-black uppercase tracking-[0.14em] text-white">
+              <article className="group bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-petroleum-900/10">
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="border border-t-0 border-petroleum-900/10 p-5">
+                  <span className="text-[0.64rem] font-black uppercase tracking-[0.14em] text-sand-600">
                     {project.tag}
                   </span>
-                  <h3 className="mt-4 font-display text-base font-black uppercase leading-tight sm:text-lg">
+                  <h3 className="mt-3 font-display text-base font-black uppercase leading-tight text-petroleum-900">
                     {project.name}
                   </h3>
-                  <p className="mt-2 text-xs font-semibold text-white/70">
+                  <p className="mt-2 text-xs font-semibold text-charcoal/55">
                     {project.location}
                   </p>
                 </div>

@@ -18,6 +18,7 @@ import {
   Phone,
   Mail,
   MapPin,
+  Printer,
   type LucideIcon,
 } from "lucide-react";
 
@@ -41,6 +42,7 @@ const ICONS: Record<string, LucideIcon> = {
   phone: Phone,
   mail: Mail,
   "map-pin": MapPin,
+  printer: Printer,
 };
 
 export function Icon({
