@@ -18,7 +18,7 @@ export const PAGES: PageId[] = [
   "contact",
 ];
 
-const SITE_TITLE = "Loco Traços";
+const SITE_TITLE = "Loco Tracos | Arquitetura, Engenharia e Construcao em Angola";
 
 function hashToPage(): PageId {
   if (typeof window === "undefined") return "home";

@@ -53,8 +53,7 @@ export const IMAGES = {
   teamHelmets: pdfAsset("pdf-image-008-obj-75.jpg"),
   teamWomen: pdfAsset("pdf-image-016-obj-115.jpg"),
   consultingSite: pdfAsset("pdf-image-011-obj-88.jpg"),
-  plotterPrint:
-    "https://images.pexels.com/photos/9565383/pexels-photo-9565383.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  plotterPrint: "/images/plotter-print.jpg",
   interiorChandelier: pdfAsset("pdf-image-050-obj-239.jpg"),
   interiorBlue: pdfAsset("pdf-image-051-obj-240.jpg"),
   interiorMinimal: pdfAsset("pdf-image-027-obj-174.jpg"),
