@@ -18,7 +18,7 @@ function History() {
         <div className="grid overflow-hidden bg-white shadow-[0_22px_55px_rgba(15,23,42,0.13)] ring-1 ring-black/5 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="p-6 sm:p-10 lg:p-14">
             <SectionHeading
-              eyebrow="Sobre a Loco Tracos"
+              eyebrow="Sobre a Loco Traços"
               title={
                 <>
                   Uma jornada guiada pelo{" "}
@@ -165,7 +165,7 @@ function TeamTech() {
           <Reveal className="relative min-h-[420px] overflow-hidden bg-petroleum-950">
             <img
               src={IMAGES.teamHelmets}
-              alt="Equipa tecnica da Loco Tracos com capacetes"
+              alt="Equipa tecnica da Loco Traços com capacetes"
               className="absolute inset-0 h-full w-full object-cover opacity-72"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-petroleum-950 via-petroleum-950/35 to-transparent" />
@@ -186,7 +186,7 @@ function TeamTech() {
                   <span className="text-sand-500">Vanguarda</span>
                 </>
               }
-              intro="A Loco Tracos orgulha-se de possuir uma equipa experiente de arquitetos, engenheiros e tecnicos focados em transformar conceito, detalhe e execucao num resultado coerente."
+              intro="A Loco Traços orgulha-se de possuir uma equipa experiente de arquitetos, engenheiros e tecnicos focados em transformar conceito, detalhe e execucao num resultado coerente."
             />
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {features.map((f, i) => (
@@ -219,8 +219,8 @@ export function About() {
         eyebrow="A Empresa"
         title={
           <>
-            Desenhamos espacos,<br className="hidden sm:block" /> projetos e
-            relacoes
+            Desenhamos espaços,<br className="hidden sm:block" /> projetos e
+            relações
           </>
         }
         subtitle="Jovem, ousada e inovadora, uma empresa angolana dedicada a excelencia em arquitetura, engenharia e consultoria tecnica."
