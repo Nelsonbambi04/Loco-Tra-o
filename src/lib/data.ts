@@ -1,8 +1,8 @@
 import type { PageId } from "./navigation";
 
 export const COMPANY = {
-  name: "Loco Tracos",
-  legalName: "Loco Tracos - Angola",
+  name: "Loco Traços",
+  legalName: "Loco Traços - Angola",
   slogan: "Arquitetura que ganha forma com rigor tecnico.",
   founded: 2020,
   nif: "5000510661",
@@ -16,10 +16,10 @@ export const COMPANY = {
 };
 
 export const NAV_ITEMS: { id: PageId; label: string }[] = [
-  { id: "home", label: "Inicio" },
+  { id: "home", label: "Início" },
   { id: "about", label: "A Empresa" },
-  { id: "services", label: "Servicos" },
-  { id: "portfolio", label: "Portfolio" },
+  { id: "services", label: "Serviços" },
+  { id: "portfolio", label: "Portfólio" },
   { id: "contact", label: "Contactos" },
 ];
 
@@ -63,25 +63,25 @@ export const IMAGES = {
 export const DIFFERENTIALS = [
   {
     icon: "award",
-    title: "Arquitetura com Visao",
-    text: "Concebemos projetos arquitetonicos funcionais, elegantes e adaptados ao contexto angolano, sempre com foco na experiencia de quem vai viver ou usar o espaco.",
+    title: "Arquitetura com Visão",
+    text: "Concebemos projetos arquitetonicos funcionais, elegantes e adaptados ao contexto angolano, sempre com foco na experiencia de quem vai viver ou usar o espaço.",
   },
   {
     icon: "users",
     title: "Equipa Multidisciplinar",
-    text: "Arquitetos, engenheiros e tecnicos trabalham em conjunto para transformar conceito, tecnica e obra num resultado coerente e de alto padrao.",
+    text: "Arquitetos, engenheiros e tecnicos trabalham em conjunto para transformar conceito, tecnica e obra num resultado coerente e de alto padrão.",
   },
   {
     icon: "cpu",
     title: "Tecnologia & Controlo",
-    text: "Modelacao, desenho tecnico, acompanhamento e controlo de qualidade apoiam cada decisao, do estudo inicial aos acabamentos finais.",
+    text: "Modelação, desenho tecnico, acompanhamento e controlo de qualidade apoiam cada decisão, do estudo inicial aos acabamentos finais.",
   },
 ];
 
 export const STATS = [
   { value: 2020, label: "Fundada", suffix: "" },
   { value: 30, label: "Projetos entregues", suffix: "+" },
-  { value: 6, label: "Areas de atuacao", suffix: "" },
+  { value: 6, label: "Areas de atuação", suffix: "" },
   { value: 100, label: "Foco em qualidade", suffix: "%" },
 ];
 
@@ -101,41 +101,41 @@ export const SERVICES: Service[] = [
     slug: "arquitetura-design",
     index: "01",
     title: "Arquitetura & Design",
-    short: "Concecao arquitetonica, interiores e experiencia espacial.",
+    short: "Conceção arquitetonica, interiores e experiencia espacial.",
     description:
       "Desenvolvemos projetos arquitetonicos inovadores, funcionais e personalizados, com leitura cuidada do terreno, do programa e da identidade de cada cliente.",
     bullets: [
       "Projetos arquitetonicos personalizados",
       "Design de interiores e conceito espacial",
       "Comercio, clinicas e residencias",
-      "Apresentacoes 2D, 3D e apoio visual",
+      "Apresentações 2D, 3D e apoio visual",
     ],
     image: IMAGES.interiorBlue,
     icon: "compass",
   },
   {
-    slug: "engenharia-fiscalizacao",
+    slug: "engenharia-fiscalização",
     index: "02",
-    title: "Engenharia & Fiscalizacao",
+    title: "Engenharia & Fiscalização",
     short: "Rigor tecnico para tornar o projeto executavel.",
     description:
-      "Apoiamos a arquitetura com engenharia, fiscalizacao e gestao tecnica, garantindo compatibilidade, seguranca, qualidade e cumprimento das especificacoes do projeto.",
+      "Apoiamos a arquitetura com engenharia, fiscalização e gestão tecnica, garantindo compatibilidade, seguranca, qualidade e cumprimento das especificacoes do projeto.",
     bullets: [
-      "Fiscalizacao e direcao tecnica",
-      "Compatibilizacao de especialidades",
+      "Fiscalização e direcao tecnica",
+      "Compatibilização de especialidades",
       "Controlo de qualidade e prazos",
-      "Gestao transparente da empreitada",
+      "Gestão transparente da empreitada",
     ],
     image: IMAGES.teamHardHats,
     icon: "clipboard-check",
   },
   {
-    slug: "construcao-civil",
+    slug: "construção-civil",
     index: "03",
-    title: "Construcao Civil e Empreitadas",
-    short: "Execucao de obras alinhada ao projeto arquitetonico.",
+    title: "Construção Civil e Empreitadas",
+    short: "Execução de obras alinhada ao projeto arquitetônico.",
     description:
-      "Executamos obras publicas e privadas com planeamento rigoroso, mao-de-obra especializada e respeito pela intencao arquitetonica definida em projeto.",
+      "Executamos obras publicas e privadas com planeamento rigoroso, mão-de-obra especializada e respeito pela intenção arquitetônica definida em projeto.",
     bullets: [
       "Planeamento e preparo do solo",
       "Alvenaria, estruturas e coberturas",
@@ -148,15 +148,15 @@ export const SERVICES: Service[] = [
   {
     slug: "topografia",
     index: "04",
-    title: "Topografia & Implantacao",
+    title: "Topografia & Implantação",
     short: "Base tecnica precisa para projetar e implantar.",
     description:
-      "Realizamos levantamentos topograficos, implantacao e apoio ao projeto para que a arquitetura responda corretamente ao terreno e ao contexto.",
+      "Realizamos levantamentos topograficos, implantação e apoio ao projeto para que a arquitetura responda corretamente ao terreno e ao contexto.",
     bullets: [
       "Estudos e levantamento topografico",
-      "Implantacao e nivelamento de obra",
+      "Implantação e nivelamento de obra",
       "Georreferenciamento",
-      "Apoio ao projeto e execucao",
+      "Apoio ao projeto e execução",
     ],
     image: IMAGES.facadeMinimal,
     icon: "map",
@@ -167,23 +167,23 @@ export const SERVICES: Service[] = [
     title: "Consultoria Tecnica",
     short: "Apoio especializado para decidir melhor antes de construir.",
     description:
-      "Prestamos consultoria arquitetonica e tecnica, avaliacao imobiliaria e apoio a decisoes de projeto, custos, viabilidade e formacao especializada.",
+      "Prestamos consultoria arquitetonica e tecnica, avaliação imobiliaria e apoio a decisões de projeto, custos, viabilidade e formação especializada.",
     bullets: [
       "Consultoria arquitetonica e tecnica",
-      "Avaliacao imobiliaria detalhada",
+      "Avaliação imobiliaria detalhada",
       "Orcamentos, medicoes e viabilidade",
-      "Formacao em AutoCAD 2D/3D",
+      "Formação em AutoCAD 2D/3D",
     ],
     image: IMAGES.consultingSite,
     icon: "graduation-cap",
   },
   {
-    slug: "servicos-plotter",
+    slug: "serviços-plotter",
     index: "06",
-    title: "Servicos de Plotter",
-    short: "Impressao de plantas, desenhos tecnicos e pranchas.",
+    title: "Serviços de Plotter",
+    short: "Impressão de plantas, desenhos tecnicos e pranchas.",
     description:
-      "Servicos de plotter para impressao de projetos arquitetonicos, plantas, mapas e documentos tecnicos, com formatos desde A4 ate A0+, incluindo corte, acabamento e dobragem de folhas.",
+      "Serviços de plotter para impressão de projetos arquitetonicos, plantas, mapas e documentos tecnicos, com formatos desde A4 ate A0+, incluindo corte, acabamento e dobragem de folhas.",
     bullets: [
       "Impressoes de A4 ate A0+",
       "Plantas, pranchas e desenhos tecnicos",
@@ -198,28 +198,28 @@ export const SERVICES: Service[] = [
 export const PILLARS = [
   {
     key: "missao",
-    label: "Missao",
+    label: "Missão",
     icon: "target",
-    text: "Criar arquitetura de qualidade, funcional e duradoura, apoiada por engenharia rigorosa e por uma relacao transparente com cada cliente.",
+    text: "Criar arquitetura de qualidade, funcional e duradoura, apoiada por engenharia rigorosa e por uma relação transparente com cada cliente.",
   },
   {
-    key: "visao",
-    label: "Visao",
+    key: "visão",
+    label: "Visão",
     icon: "eye",
-    text: "Ser uma referencia em Angola em projetos de arquitetura, interiores e acompanhamento tecnico, reconhecida pela qualidade dos espacos que concebe e entrega.",
+    text: "Ser uma referencia em Angola em projetos de arquitetura, interiores e acompanhamento tecnico, reconhecida pela qualidade dos espaços que concebe e entrega.",
   },
   {
     key: "valores",
     label: "Valores",
     icon: "gem",
-    text: "Principios que guiam cada projeto, cada decisao tecnica e cada relacao que construimos.",
+    text: "Principios que guiam cada projeto, cada decisão tecnica e cada relação que construimos.",
   },
 ];
 
 export const VALUES = [
   { title: "Criatividade com rigor tecnico", icon: "ruler" },
   { title: "Funcionalidade e conforto", icon: "lightbulb" },
-  { title: "Pontualidade e prontidao", icon: "clock" },
+  { title: "Pontualidade e prontidão", icon: "clock" },
   { title: "Confidencialidade e responsabilidade social", icon: "shield" },
   { title: "Espirito de equipa e parceria", icon: "handshake" },
 ];
@@ -240,22 +240,22 @@ export const FEATURED_PROJECTS: Project[] = [
     type: "Design Comercial & Arquitetura de Interiores",
     location: "Avenida Deolinda Rodrigues, Luanda",
     highlight:
-      "Intervencao em fachada, otimizacao dos espacos de atendimento clinico e acompanhamento tecnico da execucao.",
+      "Intervenção em fachada, otimização dos espaços de atendimento clinico e acompanhamento tecnico da execução.",
     image: IMAGES.facadeGlass,
     tag: "Clinica",
   },
   {
-    name: "Reabilitacao da Administracao do F.A.S",
-    type: "Arquitetura Institucional / Reabilitacao",
+    name: "Reabilitação da Administração do F.A.S",
+    type: "Arquitetura Institucional / Reabilitação",
     location: "Camabatela, Provincia do Kwanza Norte",
     highlight:
-      "Reabilitacao institucional com foco em funcionalidade, durabilidade e melhoria das condicoes de utilizacao.",
+      "Reabilitação institucional com foco em funcionalidade, durabilidade e melhoria das condicoes de utilização.",
     image: IMAGES.facadeUrban,
     tag: "Institucional",
   },
   {
     name: "Residencia Cirilo",
-    type: "Arquitetura Residencial de Alto Padrao",
+    type: "Arquitetura Residencial de Alto Padrão",
     location: "Bairro Kikagil, Municipio de Luanda",
     description:
       "Projeto residencial moderno composto por sala de estar, sala de jantar, 4 quartos, cozinha planeada, piscina e terraco sofisticado.",
@@ -267,7 +267,7 @@ export const FEATURED_PROJECTS: Project[] = [
     type: "Arquitetura Urbanistica / Residencial",
     location: "Distrito Urbano do Benfica, Municipio de Belas",
     highlight:
-      "Concecao urbanistica integrada com foco em conforto, seguranca e qualidade de vida.",
+      "Conceção urbanistica integrada com foco em conforto, seguranca e qualidade de vida.",
     image: IMAGES.apartments,
     tag: "Urbanistico",
   },
@@ -288,9 +288,9 @@ export const GALLERY_PROJECTS: { name: string; location: string; image: string }
 
 export const SERVICE_OPTIONS = [
   "Projeto de Arquitetura / Design",
-  "Engenharia / Fiscalizacao",
-  "Construcao",
+  "Engenharia / Fiscalização",
+  "Construção",
   "Topografia",
-  "Servicos de Plotter",
+  "Serviços de Plotter",
   "Consultoria / Outro",
 ];
