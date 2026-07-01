@@ -61,7 +61,7 @@ function History() {
 
           <Reveal delay={160} className="relative min-h-[360px] lg:min-h-full">
             <img
-              src={IMAGES.teamWomen}
+              src={IMAGES.villaPoolHero}
               alt="Equipa de arquitetas da Loco Tracos"
               className="absolute inset-0 h-full w-full object-cover"
             />

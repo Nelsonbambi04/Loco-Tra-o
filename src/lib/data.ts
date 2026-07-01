@@ -26,6 +26,7 @@ export const NAV_ITEMS: { id: PageId; label: string }[] = [
 const pdfAsset = (file: string) => `/portfolio-pdf/${file}`;
 
 export const IMAGES = {
+  villaPoolHero: pdfAsset("pdf-image-001-obj-5.jpg"),
   hero: pdfAsset("pdf-image-028-obj-177.jpg"),
   heroAlt: pdfAsset("pdf-image-009-obj-76.jpg"),
   villaDusk: pdfAsset("pdf-image-028-obj-177.jpg"),
